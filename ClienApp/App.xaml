@@ -1,0 +1,43 @@
+﻿<Application x:Class="ClienApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ClienApp"
+             xmlns:viewModel="clr-namespace:ClienApp.MVVM.ViewModel"
+             xmlns:view="clr-namespace:ClienApp.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TextboxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/ScrollTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:PropertiesViewModel}">
+                <view:PropertiesView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:HandelPropertyViewModel}">
+                <view:HandelPropertyView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:VerdiPropertyViewModel}">
+                <view:VerdiPropertyView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:OlifantPropertyViewModel}">
+                <view:OlifantPropertyView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:ColeridgePropertyViewModel}">
+                <view:ColeridgePropertyView/>
+            </DataTemplate>
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

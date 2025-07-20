@@ -1,0 +1,470 @@
+﻿<UserControl x:Class="ClienApp.MVVM.View.HandelPropertyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClienApp.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="505" d:DesignWidth="700"
+             Background="Transparent">
+
+    <Border>
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="1"
+                    Width="330"
+                    Height="200"
+                    CornerRadius="0,10,0,0"
+                    Background="Transparent"
+                    VerticalAlignment="Top"
+                    Margin="0,10,0,0">
+                
+                <Border.OpacityMask>
+                    <VisualBrush Stretch="None">
+                        <VisualBrush.Visual>
+                            <Border CornerRadius="0,10,0,0"
+                    Width="330"
+                    Height="200"
+                    Background="Black"/>
+                        </VisualBrush.Visual>
+                    </VisualBrush>
+                </Border.OpacityMask>
+
+                <Image Source="/Images/Handel-St.jpg"
+                       Width="330"
+                       Height="200"
+                       Stretch="Fill"/>
+            </Border>
+
+
+            <StackPanel Margin="5,5"
+                        Grid.Column="1"
+                        VerticalAlignment="Bottom">
+
+                <WrapPanel Orientation="Horizontal" 
+                           Grid.Column="1">
+
+                    <Button Background="Transparent"
+            BorderBrush="Transparent"
+            Padding="0"
+            HorizontalAlignment="Left">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+
+                        <Border Width="75"
+                Height="30"
+                CornerRadius="5"
+                Margin="5,5">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                    <GradientStop Color="#5D2A29" Offset="0.0"/>
+                                    <GradientStop Color="#EFC0B0" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10" 
+                                   RadiusY="10"
+                                   Rect="0,0,75,30"/>
+                            </Border.Clip>
+                            <TextBlock  Text="Roon 1"
+                        Foreground="White"
+                        FontSize="15"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                        </Border>
+                    </Button>
+
+                    <Button Background="Transparent"
+            BorderBrush="Transparent"
+            Padding="0"
+            HorizontalAlignment="Left">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+
+                        <Border Width="75"
+                Height="30"
+                CornerRadius="5"
+                Margin="5,5">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                    <GradientStop Color="#5D2A29" Offset="0.0"/>
+                                    <GradientStop Color="#EFC0B0" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10" 
+                                   RadiusY="10"
+                                   Rect="0,0,75,30"/>
+                            </Border.Clip>
+                            <TextBlock  Text="Roon 1"
+                        Foreground="White"
+                        FontSize="15"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                        </Border>
+                    </Button>
+
+                    <Button Background="Transparent"
+            BorderBrush="Transparent"
+            Padding="0"
+            HorizontalAlignment="Left">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+
+                        <Border Width="75"
+                Height="30"
+                CornerRadius="5"
+                Margin="5,5">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                    <GradientStop Color="#5D2A29" Offset="0.0"/>
+                                    <GradientStop Color="#EFC0B0" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10" 
+                                   RadiusY="10"
+                                   Rect="0,0,75,30"/>
+                            </Border.Clip>
+                            <TextBlock  Text="Roon 1"
+                        Foreground="White"
+                        FontSize="15"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                        </Border>
+                    </Button>
+
+                    <Button Background="Transparent"
+            BorderBrush="Transparent"
+            Padding="0"
+            HorizontalAlignment="Left">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+
+                        <Border Width="75"
+                                Height="30"
+                                CornerRadius="5"
+                                 Margin="5,5">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                    <GradientStop Color="#5D2A29" Offset="0.0"/>
+                                    <GradientStop Color="#EFC0B0" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10" 
+                                   RadiusY="10"
+                                   Rect="0,0,75,30"/>
+                            </Border.Clip>
+                            <TextBlock  Text="Roon 1"
+                        Foreground="White"
+                        FontSize="15"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                        </Border>
+                    </Button>
+
+                    <Button Background="Transparent"
+            BorderBrush="Transparent"
+            Padding="0"
+            HorizontalAlignment="Left">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+
+                        <Border Width="75"
+                Height="30"
+                CornerRadius="5"
+                Margin="5,5">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                    <GradientStop Color="#5D2A29" Offset="0.0"/>
+                                    <GradientStop Color="#EFC0B0" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10" 
+                                   RadiusY="10"
+                                   Rect="0,0,75,30"/>
+                            </Border.Clip>
+                            <TextBlock  Text="Roon 1"
+                        Foreground="White"
+                        FontSize="15"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                        </Border>
+                    </Button>
+
+                    <Button Background="Transparent"
+            BorderBrush="Transparent"
+            Padding="0"
+            HorizontalAlignment="Left">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+
+                        <Border Width="75"
+                Height="30"
+                CornerRadius="5"
+                Margin="5,5">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                    <GradientStop Color="#5D2A29" Offset="0.0"/>
+                                    <GradientStop Color="#EFC0B0" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10" 
+                                   RadiusY="10"
+                                   Rect="0,0,75,30"/>
+                            </Border.Clip>
+                            <TextBlock  Text="Roon 1"
+                        Foreground="White"
+                        FontSize="15"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                        </Border>
+                    </Button>
+
+                    <Button Background="Transparent"
+            BorderBrush="Transparent"
+            Padding="0"
+            HorizontalAlignment="Left">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+
+                        <Border Width="75"
+                Height="30"
+                CornerRadius="5"
+                Margin="5,5">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                    <GradientStop Color="#5D2A29" Offset="0.0"/>
+                                    <GradientStop Color="#EFC0B0" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10" 
+           RadiusY="10"
+           Rect="0,0,75,30"/>
+                            </Border.Clip>
+                            <TextBlock  Text="Roon 1"
+                        Foreground="White"
+                        FontSize="15"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                        </Border>
+                    </Button>
+
+                    <Button Background="Transparent"
+            BorderBrush="Transparent"
+            Padding="0"
+            HorizontalAlignment="Left">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+
+                        <Border Width="75"
+                Height="30"
+                CornerRadius="5"
+                Margin="5,5">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                    <GradientStop Color="#5D2A29" Offset="0.0"/>
+                                    <GradientStop Color="#EFC0B0" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10" 
+                                   RadiusY="10"
+                                   Rect="0,0,75,30"/>
+                            </Border.Clip>
+                            <TextBlock  Text="Roon 1"
+                        Foreground="White"
+                        FontSize="15"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                        </Border>
+                    </Button>
+
+                </WrapPanel>
+
+                <Border Background="Transparent"
+                        Width="330"
+                        Height="190"
+                        Margin="0,10,0,0"
+                        Padding="2"
+                        BorderBrush="Beige"
+                        BorderThickness="2"
+                        CornerRadius="0,0,10,0">
+
+                    <TextBlock Text="     Room Quick View"
+                               FontSize="8"
+                               Foreground="White"/>
+
+                </Border>
+
+            </StackPanel>
+
+
+            <Border Background="#EFC0B0"
+                    Width="330"
+                    Height="190"
+                    Margin="0,10,0,0"
+                    Padding="2"
+                    VerticalAlignment="Top"
+                    CornerRadius="10,0,0,0">
+
+                <StackPanel>
+                <TextBlock Text="Handel Property"
+                           FontSize="20"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           Margin="10,30,0,0"/>
+
+                <TextBlock Text="Numbers of Rooms :"
+                           FontSize="20"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           Margin="10,10,0,0"/>
+
+                <TextBlock Text="Numbers of Tenants :"
+                           FontSize="20"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           Margin="10,10,0,0"/>
+
+                <TextBlock Text="Rooms on BnB :"
+                           FontSize="20"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           Margin="10,10,0,0"/>
+                    </StackPanel>
+             </Border>
+           
+
+            <Border Background="Transparent"
+                    Width="330"
+                    Height="285"
+                    Margin="0,10,0,5"
+                    VerticalAlignment="Bottom"
+                    Padding="2"
+                    BorderBrush="Beige"
+                    BorderThickness="2"
+                    CornerRadius="0,0,0,10">
+
+                <TextBlock Text="    Tasks Outstanding"
+                           FontSize="8"
+                           Foreground="White"/>
+            </Border>
+
+
+        </Grid>
+    </Border>
+</UserControl>
