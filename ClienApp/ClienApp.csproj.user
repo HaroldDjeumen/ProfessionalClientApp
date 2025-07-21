@@ -17,6 +17,9 @@
     <Compile Update="MVVM\View\PropertiesView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\RoomDetailView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\VerdiPropertyView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

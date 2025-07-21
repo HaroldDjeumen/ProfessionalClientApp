@@ -1,0 +1,114 @@
+﻿<UserControl x:Class="ClienApp.MVVM.View.RoomDetailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClienApp.MVVM.View"
+             xmlns:vm="clr-namespace:ClienApp.MVVM.ViewModel"
+             mc:Ignorable="d"
+             d:DesignHeight="505" d:DesignWidth="700">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Image or Icon -->
+        
+            <Border Grid.Column="0"
+                    Width="320"
+                    Height="485"
+                    CornerRadius="10"
+                    Background="Transparent">
+                <Border.OpacityMask>
+                    <VisualBrush Stretch="None">
+                        <VisualBrush.Visual>
+                            <Border CornerRadius="10,0,0,10"
+                                    Width="320"
+                                    Height="485"
+                                    Background="Black"/>
+                        </VisualBrush.Visual>
+                    </VisualBrush>
+                </Border.OpacityMask>
+
+            <Image Source="{Binding CurrentRoom.RoomImage}"
+                       Width="320"
+                       Height="485"
+                       Stretch="Fill"/>
+            </Border>
+        
+
+        <!-- Room Details -->
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" Height="490">
+
+            <TextBlock Text="{Binding CurrentRoom.RoomName}" FontSize="26" FontWeight="Bold" Height="30"  Foreground="White" Margin="10,0,0,0"/>
+            <TextBlock Text="{Binding CurrentRoom.RoomType}" FontSize="16" Foreground="{Binding CurrentRoom.Lightcolor}" Height="25" Margin="10,5,0,0"/>
+
+            <TextBlock Text="Status:" FontWeight="Bold" Margin="10,10,0,0" Foreground="White"/>
+            <TextBlock Text="{Binding CurrentRoom.Status}" Margin="10,5,0,0" Foreground="White"/>
+
+            <TextBlock Text="Tenant:" FontWeight="Bold" Margin="10,10,0,0" Foreground="White"/>
+            <TextBlock Text="{Binding CurrentRoom.TenantName}" Margin="10,5,0,0" Foreground="White"/>
+
+            <TextBlock Text="Stay Duration:" FontWeight="Bold" Margin="10,10,0,0" Foreground="White"/>
+            <TextBlock Text="{Binding CurrentRoom.StayPeriod}" Margin="10,5,0,0" Foreground="White"/>
+
+            <TextBlock Text="Rent Status:" FontWeight="Bold" Margin="10,10,0,0" Foreground="White"/>
+            <TextBlock Text="{Binding CurrentRoom.RentPaidStatus}" Margin="10,5,0,0" Foreground="White"/>
+
+            <!-- Edit Button wired to EditCommand -->
+            <Button Background="Transparent"
+                    BorderBrush="Transparent"
+                    Padding="0"
+                    HorizontalAlignment="Center">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="BorderBrush" Value="Transparent"/>
+                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <ContentPresenter/>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+
+                <Border Width="105"
+                        Height="30"
+                        CornerRadius="1"
+                        Margin="5,10,0,0">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                            <GradientStop Color="{Binding CurrentRoom.Darkcolor}" Offset="0.0"/>
+                            <GradientStop Color="{Binding CurrentRoom.Lightcolor}" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="5" 
+                                           RadiusY="5"
+                                           Rect="0,0,105,30"/>
+                    </Border.Clip>
+                    <TextBlock  Text="Edit info"
+                                Foreground="White"
+                                FontSize="15"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
+                </Border>
+            </Button>
+
+            <Border Background="Transparent"
+                    Width="330"
+                    Height="191"
+                    Margin="0,10,0,5"
+                    Padding="2"
+                    BorderBrush="{Binding CurrentRoom.Lightcolor}"
+                    BorderThickness="2"
+                    CornerRadius="0,0,10,0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

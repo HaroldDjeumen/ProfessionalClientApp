@@ -66,24 +66,24 @@
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="1"
-                                Width="310"
-                                Height="200"
+                                Width="300"
+                                Height="190"
                                 CornerRadius="10"
                                 Background="Transparent">
                                 <Border.OpacityMask>
                                     <VisualBrush Stretch="None">
                                         <VisualBrush.Visual>
                                             <Border CornerRadius="0,10,10,0"
-                                                Width="310"
-                                                Height="200"
+                                                Width="300"
+                                                Height="190"
                                                 Background="Black"/>
                                         </VisualBrush.Visual>
                                     </VisualBrush>
                                 </Border.OpacityMask>
 
                                 <Image Source="/Images/Handel-St.jpg"
-                                   Width="310"
-                                   Height="200"
+                                   Width="300"
+                                   Height="190"
                                    Stretch="Fill"/>
                             </Border>
 
@@ -115,52 +115,11 @@
                                         <WrapPanel Orientation="Horizontal" Margin="0,5" >
 
                                             <Button Background="Transparent"
-                                                BorderBrush="Transparent"
-                                                Padding="0"
-                                                HorizontalAlignment="Left">
-
-                                                <Button.Style>
-                                                    <Style TargetType="Button">
-                                                        <Setter Property="Background" Value="Transparent"/>
-                                                        <Setter Property="BorderBrush" Value="Transparent"/>
-                                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
-                                                        <Setter Property="Template">
-                                                            <Setter.Value>
-                                                                <ControlTemplate TargetType="Button">
-                                                                    <ContentPresenter/>
-                                                                </ControlTemplate>
-                                                            </Setter.Value>
-                                                        </Setter>
-                                                    </Style>
-                                                </Button.Style>
-
-                                                <Border Width="70"
-                                                    Height="30"
-                                                    CornerRadius="5"
-                                                    Margin="5,5">
-                                                    <Border.Background>
-                                                        <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
-                                                            <GradientStop Color="#5D2A29" Offset="0.0"/>
-                                                            <GradientStop Color="#EFC0B0" Offset="1.0"/>
-                                                        </LinearGradientBrush>
-                                                    </Border.Background>
-                                                    <Border.Clip>
-                                                        <RectangleGeometry RadiusX="10" 
-                                                                       RadiusY="10"
-                                                                       Rect="0,0,70,30"/>
-                                                    </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
-                                                        Foreground="White"
-                                                        FontSize="15"
-                                                        HorizontalAlignment="Center"
-                                                        VerticalAlignment="Center"/>
-                                                </Border>
-                                            </Button>
-
-                                            <Button Background="Transparent"
                                                     BorderBrush="Transparent"
                                                     Padding="0"
-                                                    HorizontalAlignment="Left">
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Handel 1">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -192,18 +151,20 @@
                                                                            RadiusY="10"
                                                                            Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
-                                                                Foreground="White"
-                                                                FontSize="15"
-                                                                HorizontalAlignment="Center"
-                                                                VerticalAlignment="Center"/>
-                                                </Border>
+                                                    <TextBlock Text="Handel 1" 
+                                                               Foreground="White"
+                                                               FontSize="15"
+                                                               HorizontalAlignment="Center"
+                                                               VerticalAlignment="Center"/>
+                                                               </Border>
                                             </Button>
 
                                             <Button Background="Transparent"
                                                     BorderBrush="Transparent"
                                                     Padding="0"
-                                                    HorizontalAlignment="Left">
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Handel 2">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -235,7 +196,7 @@
                                                                            RadiusY="10"
                                                                            Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Handel 2" 
                                                                 Foreground="White"
                                                                 FontSize="15"
                                                                 HorizontalAlignment="Center"
@@ -246,7 +207,9 @@
                                             <Button Background="Transparent"
                                                     BorderBrush="Transparent"
                                                     Padding="0"
-                                                    HorizontalAlignment="Left">
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Handel 3">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -278,7 +241,7 @@
                                                                            RadiusY="10"
                                                                            Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Handel 3" 
                                                                 Foreground="White"
                                                                 FontSize="15"
                                                                 HorizontalAlignment="Center"
@@ -289,7 +252,9 @@
                                             <Button Background="Transparent"
                                                     BorderBrush="Transparent"
                                                     Padding="0"
-                                                    HorizontalAlignment="Left">
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Handel 4">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -321,7 +286,7 @@
                                                                            RadiusY="10"
                                                                            Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Handel 4" 
                                                                 Foreground="White"
                                                                 FontSize="15"
                                                                 HorizontalAlignment="Center"
@@ -330,9 +295,11 @@
                                             </Button>
 
                                             <Button Background="Transparent"
-            BorderBrush="Transparent"
-            Padding="0"
-            HorizontalAlignment="Left">
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Handel 5">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -350,9 +317,9 @@
                                                 </Button.Style>
 
                                                 <Border Width="70"
-                Height="30"
-                CornerRadius="5"
-                Margin="5,5">
+                                                        Height="30"
+                                                        CornerRadius="5"
+                                                        Margin="5,5">
                                                     <Border.Background>
                                                         <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
                                                             <GradientStop Color="#5D2A29" Offset="0.0"/>
@@ -361,21 +328,23 @@
                                                     </Border.Background>
                                                     <Border.Clip>
                                                         <RectangleGeometry RadiusX="10" 
-                                   RadiusY="10"
-                                   Rect="0,0,70,30"/>
+                                                                           RadiusY="10"
+                                                                           Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
-                        Foreground="White"
-                        FontSize="15"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"/>
+                                                    <TextBlock  Text="Handel 5" 
+                                                                Foreground="White"
+                                                                FontSize="15"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center"/>
                                                 </Border>
                                             </Button>
 
                                             <Button Background="Transparent"
-            BorderBrush="Transparent"
-            Padding="0"
-            HorizontalAlignment="Left">
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Handel 6">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -393,9 +362,9 @@
                                                 </Button.Style>
 
                                                 <Border Width="70"
-                Height="30"
-                CornerRadius="5"
-                Margin="5,5">
+                                                        Height="30"
+                                                        CornerRadius="5"
+                                                        Margin="5,5">
                                                     <Border.Background>
                                                         <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
                                                             <GradientStop Color="#5D2A29" Offset="0.0"/>
@@ -404,21 +373,23 @@
                                                     </Border.Background>
                                                     <Border.Clip>
                                                         <RectangleGeometry RadiusX="10" 
-                                   RadiusY="10"
-                                   Rect="0,0,70,30"/>
+                                                                           RadiusY="10"
+                                                                           Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
-                        Foreground="White"
-                        FontSize="15"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"/>
+                                                    <TextBlock  Text="Handel 6" 
+                                                                Foreground="White"
+                                                                FontSize="15"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center"/>
                                                 </Border>
                                             </Button>
 
                                             <Button Background="Transparent"
-            BorderBrush="Transparent"
-            Padding="0"
-            HorizontalAlignment="Left">
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Handel 7">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -436,9 +407,9 @@
                                                 </Button.Style>
 
                                                 <Border Width="70"
-                Height="30"
-                CornerRadius="5"
-                Margin="5,5">
+                                                        Height="30"
+                                                        CornerRadius="5"
+                                                        Margin="5,5">
                                                     <Border.Background>
                                                         <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
                                                             <GradientStop Color="#5D2A29" Offset="0.0"/>
@@ -447,16 +418,197 @@
                                                     </Border.Background>
                                                     <Border.Clip>
                                                         <RectangleGeometry RadiusX="10" 
-                                   RadiusY="10"
-                                   Rect="0,0,70,30"/>
+                                                                           RadiusY="10"
+                                                                           Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
-                        Foreground="White"
-                        FontSize="15"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"/>
+                                                    <TextBlock  Text="Handel 7" 
+                                                                Foreground="White"
+                                                                FontSize="15"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center"/>
                                                 </Border>
                                             </Button>
+
+                                            <Button Background="Transparent"
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Handel 8">
+
+                                                <Button.Style>
+                                                    <Style TargetType="Button">
+                                                        <Setter Property="Background" Value="Transparent"/>
+                                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                                        <Setter Property="Template">
+                                                            <Setter.Value>
+                                                                <ControlTemplate TargetType="Button">
+                                                                    <ContentPresenter/>
+                                                                </ControlTemplate>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </Style>
+                                                </Button.Style>
+
+                                                <Border Width="70"
+                                                        Height="30"
+                                                        CornerRadius="5"
+                                                        Margin="5,5">
+                                                    <Border.Background>
+                                                        <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                                            <GradientStop Color="#5D2A29" Offset="0.0"/>
+                                                            <GradientStop Color="#EFC0B0" Offset="1.0"/>
+                                                        </LinearGradientBrush>
+                                                    </Border.Background>
+                                                    <Border.Clip>
+                                                        <RectangleGeometry RadiusX="10" 
+                                                                           RadiusY="10"
+                                                                           Rect="0,0,70,30"/>
+                                                    </Border.Clip>
+                                                    <TextBlock  Text="Handel 8" 
+                                                                Foreground="White"
+                                                                FontSize="15"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center"/>
+                                                </Border>
+                                            </Button>
+
+                                            <Button Background="Transparent"
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Handel 9">
+
+                                                <Button.Style>
+                                                    <Style TargetType="Button">
+                                                        <Setter Property="Background" Value="Transparent"/>
+                                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                                        <Setter Property="Template">
+                                                            <Setter.Value>
+                                                                <ControlTemplate TargetType="Button">
+                                                                    <ContentPresenter/>
+                                                                </ControlTemplate>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </Style>
+                                                </Button.Style>
+
+                                                <Border Width="70"
+                                                        Height="30"
+                                                        CornerRadius="5"
+                                                        Margin="5,5">
+                                                    <Border.Background>
+                                                        <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                                            <GradientStop Color="#5D2A29" Offset="0.0"/>
+                                                            <GradientStop Color="#EFC0B0" Offset="1.0"/>
+                                                        </LinearGradientBrush>
+                                                    </Border.Background>
+                                                    <Border.Clip>
+                                                        <RectangleGeometry RadiusX="10" 
+                                                                           RadiusY="10"
+                                                                           Rect="0,0,70,30"/>
+                                                    </Border.Clip>
+                                                    <TextBlock  Text="Handel 9" 
+                                                                Foreground="White"
+                                                                FontSize="15"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center"/>
+                                                </Border>
+                                            </Button>
+
+                                            <Button Background="Transparent"
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Handel 10">
+
+                                                <Button.Style>
+                                                    <Style TargetType="Button">
+                                                        <Setter Property="Background" Value="Transparent"/>
+                                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                                        <Setter Property="Template">
+                                                            <Setter.Value>
+                                                                <ControlTemplate TargetType="Button">
+                                                                    <ContentPresenter/>
+                                                                </ControlTemplate>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </Style>
+                                                </Button.Style>
+
+                                                <Border Width="75"
+                                                        Height="30"
+                                                        CornerRadius="5"
+                                                        Margin="5,5">
+                                                    <Border.Background>
+                                                        <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                                            <GradientStop Color="#5D2A29" Offset="0.0"/>
+                                                            <GradientStop Color="#EFC0B0" Offset="1.0"/>
+                                                        </LinearGradientBrush>
+                                                    </Border.Background>
+                                                    <Border.Clip>
+                                                        <RectangleGeometry RadiusX="10" 
+                                                                           RadiusY="10"
+                                                                           Rect="0,0,75,30"/>
+                                                    </Border.Clip>
+                                                    <TextBlock  Text="Handel 10" 
+                                                                Foreground="White"
+                                                                FontSize="15"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center"/>
+                                                </Border>
+                                            </Button>
+
+                                            <Button Background="Transparent"
+        BorderBrush="Transparent"
+        Padding="0"
+        HorizontalAlignment="Left"
+        Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+        CommandParameter="Handel 11">
+
+                                                <Button.Style>
+                                                    <Style TargetType="Button">
+                                                        <Setter Property="Background" Value="Transparent"/>
+                                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                                        <Setter Property="Template">
+                                                            <Setter.Value>
+                                                                <ControlTemplate TargetType="Button">
+                                                                    <ContentPresenter/>
+                                                                </ControlTemplate>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </Style>
+                                                </Button.Style>
+
+                                                <Border Width="75"
+            Height="30"
+            CornerRadius="5"
+            Margin="5,5">
+                                                    <Border.Background>
+                                                        <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                                            <GradientStop Color="#5D2A29" Offset="0.0"/>
+                                                            <GradientStop Color="#EFC0B0" Offset="1.0"/>
+                                                        </LinearGradientBrush>
+                                                    </Border.Background>
+                                                    <Border.Clip>
+                                                        <RectangleGeometry RadiusX="10" 
+                               RadiusY="10"
+                               Rect="0,0,75,30"/>
+                                                    </Border.Clip>
+                                                    <TextBlock  Text="Handel 11" 
+                    Foreground="White"
+                    FontSize="15"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+                                                </Border>
+                                            </Button>
+
 
                                         </WrapPanel>
 
@@ -514,24 +666,24 @@
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="1"
-                                Width="310"
-                                Height="200"
+                                Width="300"
+                                Height="190"
                                 CornerRadius="10"
                                 Background="Transparent">
                                 <Border.OpacityMask>
                                     <VisualBrush Stretch="None">
                                         <VisualBrush.Visual>
                                             <Border CornerRadius="0,10,10,0"
-                                                Width="310"
-                                                Height="200"
+                                                Width="300"
+                                                Height="190"
                                                 Background="Black"/>
                                         </VisualBrush.Visual>
                                     </VisualBrush>
                                 </Border.OpacityMask>
 
                                 <Image Source="/Images/Verdi-St.jpg"
-                                   Width="310"
-                                   Height="200"
+                                   Width="300"
+                                   Height="190"
                                    Stretch="Fill"/>
                             </Border>
 
@@ -561,9 +713,11 @@
                                         <WrapPanel Orientation="Horizontal" Margin="0,5" >
                                             
                                             <Button Background="Transparent"
-                                    BorderBrush="Transparent"
-                                    Padding="0"
-                                    HorizontalAlignment="Left">
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Verdi 1">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -595,7 +749,7 @@
                                                            RadiusY="10"
                                                            Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Verdi 1"
                                             Foreground="White"
                                             FontSize="15"
                                             HorizontalAlignment="Center"
@@ -606,7 +760,9 @@
                                             <Button Background="Transparent"
                                         BorderBrush="Transparent"
                                         Padding="0"
-                                        HorizontalAlignment="Left">
+                                        HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Verdi 2">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -638,7 +794,52 @@
                                                                RadiusY="10"
                                                                Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Verdi 2"
+                                                    Foreground="White"
+                                                    FontSize="15"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"/>
+                                                </Border>
+                                            </Button>
+
+                                            <Button Background="Transparent"
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Verdi 3">
+
+                                                <Button.Style>
+                                                    <Style TargetType="Button">
+                                                        <Setter Property="Background" Value="Transparent"/>
+                                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                                        <Setter Property="Template">
+                                                            <Setter.Value>
+                                                                <ControlTemplate TargetType="Button">
+                                                                    <ContentPresenter/>
+                                                                </ControlTemplate>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </Style>
+                                                </Button.Style>
+
+                                                <Border Width="70"
+                                            Height="30"
+                                            CornerRadius="5"
+                                            Margin="5,5">
+                                                    <Border.Background>
+                                                        <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                                            <GradientStop Color="#222C21" Offset="0.0"/>
+                                                            <GradientStop Color="#AFADA9" Offset="1.0"/>
+                                                        </LinearGradientBrush>
+                                                    </Border.Background>
+                                                    <Border.Clip>
+                                                        <RectangleGeometry RadiusX="10" 
+                                                               RadiusY="10"
+                                                               Rect="0,0,70,30"/>
+                                                    </Border.Clip>
+                                                    <TextBlock  Text="Verdi 3"
                                                     Foreground="White"
                                                     FontSize="15"
                                                     HorizontalAlignment="Center"
@@ -649,7 +850,9 @@
                                             <Button Background="Transparent"
                                         BorderBrush="Transparent"
                                         Padding="0"
-                                        HorizontalAlignment="Left">
+                                        HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Verdi 4">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -681,7 +884,7 @@
                                                                RadiusY="10"
                                                                Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Verdi 4"
                                                     Foreground="White"
                                                     FontSize="15"
                                                     HorizontalAlignment="Center"
@@ -692,7 +895,9 @@
                                             <Button Background="Transparent"
                                         BorderBrush="Transparent"
                                         Padding="0"
-                                        HorizontalAlignment="Left">
+                                        HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Verdi 1">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -724,7 +929,7 @@
                                                                RadiusY="10"
                                                                Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Verdi 5"
                                                     Foreground="White"
                                                     FontSize="15"
                                                     HorizontalAlignment="Center"
@@ -733,9 +938,11 @@
                                             </Button>
 
                                             <Button Background="Transparent"
-                                        BorderBrush="Transparent"
-                                        Padding="0"
-                                        HorizontalAlignment="Left">
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Verdi 6">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -753,9 +960,9 @@
                                                 </Button.Style>
 
                                                 <Border Width="70"
-                                            Height="30"
-                                            CornerRadius="5"
-                                            Margin="5,5">
+                                                        Height="30"
+                                                        CornerRadius="5"
+                                                        Margin="5,5">
                                                     <Border.Background>
                                                         <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
                                                             <GradientStop Color="#222C21" Offset="0.0"/>
@@ -764,21 +971,23 @@
                                                     </Border.Background>
                                                     <Border.Clip>
                                                         <RectangleGeometry RadiusX="10" 
-                                                               RadiusY="10"
-                                                               Rect="0,0,70,30"/>
+                                                                           RadiusY="10"
+                                                                           Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
-                                                    Foreground="White"
-                                                    FontSize="15"
-                                                    HorizontalAlignment="Center"
-                                                    VerticalAlignment="Center"/>
+                                                    <TextBlock  Text="Verdi 6"
+                                                                 Foreground="White"
+                                                                 FontSize="15"
+                                                                 HorizontalAlignment="Center"
+                                                                 VerticalAlignment="Center"/>
                                                 </Border>
                                             </Button>
 
                                             <Button Background="Transparent"
-BorderBrush="Transparent"
-Padding="0"
-HorizontalAlignment="Left">
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Verdi 7">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -810,7 +1019,7 @@ HorizontalAlignment="Left">
                        RadiusY="10"
                        Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Verdi 7"
             Foreground="White"
             FontSize="15"
             HorizontalAlignment="Center"
@@ -821,7 +1030,9 @@ HorizontalAlignment="Left">
                                             <Button Background="Transparent"
 BorderBrush="Transparent"
 Padding="0"
-HorizontalAlignment="Left">
+HorizontalAlignment="Left"
+Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+CommandParameter="Verdi 8">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -853,50 +1064,7 @@ HorizontalAlignment="Left">
                        RadiusY="10"
                        Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
-            Foreground="White"
-            FontSize="15"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"/>
-                                                </Border>
-                                            </Button>
-
-                                            <Button Background="Transparent"
-BorderBrush="Transparent"
-Padding="0"
-HorizontalAlignment="Left">
-
-                                                <Button.Style>
-                                                    <Style TargetType="Button">
-                                                        <Setter Property="Background" Value="Transparent"/>
-                                                        <Setter Property="BorderBrush" Value="Transparent"/>
-                                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
-                                                        <Setter Property="Template">
-                                                            <Setter.Value>
-                                                                <ControlTemplate TargetType="Button">
-                                                                    <ContentPresenter/>
-                                                                </ControlTemplate>
-                                                            </Setter.Value>
-                                                        </Setter>
-                                                    </Style>
-                                                </Button.Style>
-
-                                                <Border Width="70"
-    Height="30"
-    CornerRadius="5"
-    Margin="5,5">
-                                                    <Border.Background>
-                                                        <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
-                                                            <GradientStop Color="#222C21" Offset="0.0"/>
-                                                            <GradientStop Color="#AFADA9" Offset="1.0"/>
-                                                        </LinearGradientBrush>
-                                                    </Border.Background>
-                                                    <Border.Clip>
-                                                        <RectangleGeometry RadiusX="10" 
-                       RadiusY="10"
-                       Rect="0,0,70,30"/>
-                                                    </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Verdi 8"
             Foreground="White"
             FontSize="15"
             HorizontalAlignment="Center"
@@ -960,24 +1128,24 @@ HorizontalAlignment="Left">
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="1"
-                                Width="310"
-                                Height="200"
+                                Width="300"
+                                Height="190"
                                 CornerRadius="10"
                                 Background="Transparent">
                                 <Border.OpacityMask>
                                     <VisualBrush Stretch="None">
                                         <VisualBrush.Visual>
                                             <Border CornerRadius="0,10,10,0"
-                                                Width="310"
-                                                Height="200"
+                                                Width="300"
+                                                Height="190"
                                                 Background="Black"/>
                                         </VisualBrush.Visual>
                                     </VisualBrush>
                                 </Border.OpacityMask>
 
                                 <Image Source="/Images/Olifantsrivier-St.jpg"
-                                   Width="310"
-                                   Height="200"
+                                   Width="300"
+                                   Height="190"
                                    Stretch="Fill"/>
                             </Border>
 
@@ -1008,7 +1176,9 @@ HorizontalAlignment="Left">
                                             <Button Background="Transparent"
                                     BorderBrush="Transparent"
                                     Padding="0"
-                                    HorizontalAlignment="Left">
+                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Sasol 1">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1040,7 +1210,7 @@ HorizontalAlignment="Left">
                                                            RadiusY="10"
                                                            Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Sasol 1"
                                             Foreground="White"
                                             FontSize="15"
                                             HorizontalAlignment="Center"
@@ -1051,7 +1221,9 @@ HorizontalAlignment="Left">
                                             <Button Background="Transparent"
                                         BorderBrush="Transparent"
                                         Padding="0"
-                                        HorizontalAlignment="Left">
+                                        HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Sasol 2">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1083,7 +1255,7 @@ HorizontalAlignment="Left">
                                                                RadiusY="10"
                                                                Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Sasol 2"
                                                     Foreground="White"
                                                     FontSize="15"
                                                     HorizontalAlignment="Center"
@@ -1094,7 +1266,9 @@ HorizontalAlignment="Left">
                                             <Button Background="Transparent"
                                         BorderBrush="Transparent"
                                         Padding="0"
-                                        HorizontalAlignment="Left">
+                                        HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Sasol 3">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1126,7 +1300,7 @@ HorizontalAlignment="Left">
                                                                RadiusY="10"
                                                                Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Sasol 3"
                                                     Foreground="White"
                                                     FontSize="15"
                                                     HorizontalAlignment="Center"
@@ -1137,7 +1311,9 @@ HorizontalAlignment="Left">
                                             <Button Background="Transparent"
                                         BorderBrush="Transparent"
                                         Padding="0"
-                                        HorizontalAlignment="Left">
+                                        HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Sasol 4">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1169,7 +1345,7 @@ HorizontalAlignment="Left">
                                                                RadiusY="10"
                                                                Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Sasol 4"
                                                     Foreground="White"
                                                     FontSize="15"
                                                     HorizontalAlignment="Center"
@@ -1180,7 +1356,9 @@ HorizontalAlignment="Left">
                                             <Button Background="Transparent"
                                         BorderBrush="Transparent"
                                         Padding="0"
-                                        HorizontalAlignment="Left">
+                                        HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Sasol 5">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1212,7 +1390,7 @@ HorizontalAlignment="Left">
                                                                RadiusY="10"
                                                                Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Sasol 5"
                                                     Foreground="White"
                                                     FontSize="15"
                                                     HorizontalAlignment="Center"
@@ -1221,9 +1399,11 @@ HorizontalAlignment="Left">
                                             </Button>
 
                                             <Button Background="Transparent"
-BorderBrush="Transparent"
-Padding="0"
-HorizontalAlignment="Left">
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Sasol 6">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1255,7 +1435,7 @@ HorizontalAlignment="Left">
                        RadiusY="10"
                        Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Sasol 6"
             Foreground="White"
             FontSize="15"
             HorizontalAlignment="Center"
@@ -1264,9 +1444,11 @@ HorizontalAlignment="Left">
                                             </Button>
 
                                             <Button Background="Transparent"
-BorderBrush="Transparent"
-Padding="0"
-HorizontalAlignment="Left">
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Sasol 7">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1298,7 +1480,7 @@ HorizontalAlignment="Left">
                        RadiusY="10"
                        Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Sasol 7"
             Foreground="White"
             FontSize="15"
             HorizontalAlignment="Center"
@@ -1307,9 +1489,11 @@ HorizontalAlignment="Left">
                                             </Button>
 
                                             <Button Background="Transparent"
-BorderBrush="Transparent"
-Padding="0"
-HorizontalAlignment="Left">
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="Sasol 8">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1341,7 +1525,7 @@ HorizontalAlignment="Left">
                        RadiusY="10"
                        Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="Sasol 8"
             Foreground="White"
             FontSize="15"
             HorizontalAlignment="Center"
@@ -1404,24 +1588,24 @@ HorizontalAlignment="Left">
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="1"
-                                Width="310"
-                                Height="200"
+                                Width="300"
+                                Height="190"
                                 CornerRadius="10"
                                 Background="Transparent">
                                 <Border.OpacityMask>
                                     <VisualBrush Stretch="None">
                                         <VisualBrush.Visual>
                                             <Border CornerRadius="0,10,10,0"
-                                                Width="310"
-                                                Height="200"
+                                                Width="300"
+                                                Height="190"
                                                 Background="Black"/>
                                         </VisualBrush.Visual>
                                     </VisualBrush>
                                 </Border.OpacityMask>
 
                                 <Image Source="/Images/Coleridge-St.jpg"
-                                   Width="310"
-                                   Height="200"
+                                   Width="300"
+                                   Height="190"
                                    Stretch="Fill"/>
                             </Border>
 
@@ -1453,7 +1637,9 @@ HorizontalAlignment="Left">
                                             <Button Background="Transparent"
                                     BorderBrush="Transparent"
                                     Padding="0"
-                                    HorizontalAlignment="Left">
+                                    HorizontalAlignment="Left"
+                                                     Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                     CommandParameter="VallM 1">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1485,7 +1671,7 @@ HorizontalAlignment="Left">
                                                            RadiusY="10"
                                                            Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="VaalM 1"
                                             Foreground="White"
                                             FontSize="15"
                                             HorizontalAlignment="Center"
@@ -1496,7 +1682,9 @@ HorizontalAlignment="Left">
                                             <Button Background="Transparent"
                                         BorderBrush="Transparent"
                                         Padding="0"
-                                        HorizontalAlignment="Left">
+                                        HorizontalAlignment="Left"
+                                                     Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                     CommandParameter="VaalM 2">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1528,7 +1716,7 @@ HorizontalAlignment="Left">
                                                                RadiusY="10"
                                                                Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="VaalM 2"
                                                     Foreground="White"
                                                     FontSize="15"
                                                     HorizontalAlignment="Center"
@@ -1539,7 +1727,9 @@ HorizontalAlignment="Left">
                                             <Button Background="Transparent"
                                         BorderBrush="Transparent"
                                         Padding="0"
-                                        HorizontalAlignment="Left">
+                                        HorizontalAlignment="Left"
+                                                     Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                     CommandParameter="VaalM 3">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1571,7 +1761,7 @@ HorizontalAlignment="Left">
                                                                RadiusY="10"
                                                                Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="VaalM 3"
                                                     Foreground="White"
                                                     FontSize="15"
                                                     HorizontalAlignment="Center"
@@ -1582,7 +1772,9 @@ HorizontalAlignment="Left">
                                             <Button Background="Transparent"
                                         BorderBrush="Transparent"
                                         Padding="0"
-                                        HorizontalAlignment="Left">
+                                        HorizontalAlignment="Left"
+                                                     Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                     CommandParameter="VaalM 4">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1614,7 +1806,7 @@ HorizontalAlignment="Left">
                                                                RadiusY="10"
                                                                Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="VaalM 4"
                                                     Foreground="White"
                                                     FontSize="15"
                                                     HorizontalAlignment="Center"
@@ -1625,7 +1817,9 @@ HorizontalAlignment="Left">
                                             <Button Background="Transparent"
                                         BorderBrush="Transparent"
                                         Padding="0"
-                                        HorizontalAlignment="Left">
+                                        HorizontalAlignment="Left"
+                                                     Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                     CommandParameter="VaalM 5">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1657,7 +1851,7 @@ HorizontalAlignment="Left">
                                                                RadiusY="10"
                                                                Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="VaalM 5"
                                                     Foreground="White"
                                                     FontSize="15"
                                                     HorizontalAlignment="Center"
@@ -1666,9 +1860,11 @@ HorizontalAlignment="Left">
                                             </Button>
 
                                             <Button Background="Transparent"
-BorderBrush="Transparent"
-Padding="0"
-HorizontalAlignment="Left">
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="VaalM 6">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1700,7 +1896,7 @@ HorizontalAlignment="Left">
                        RadiusY="10"
                        Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="VaalM 6"
             Foreground="White"
             FontSize="15"
             HorizontalAlignment="Center"
@@ -1709,9 +1905,11 @@ HorizontalAlignment="Left">
                                             </Button>
 
                                             <Button Background="Transparent"
-BorderBrush="Transparent"
-Padding="0"
-HorizontalAlignment="Left">
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="VaalM 7">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1743,7 +1941,7 @@ HorizontalAlignment="Left">
                        RadiusY="10"
                        Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="VaalM 7"
             Foreground="White"
             FontSize="15"
             HorizontalAlignment="Center"
@@ -1752,9 +1950,11 @@ HorizontalAlignment="Left">
                                             </Button>
 
                                             <Button Background="Transparent"
-BorderBrush="Transparent"
-Padding="0"
-HorizontalAlignment="Left">
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="VaalM 8">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">
@@ -1786,7 +1986,97 @@ HorizontalAlignment="Left">
                        RadiusY="10"
                        Rect="0,0,70,30"/>
                                                     </Border.Clip>
-                                                    <TextBlock  Text="Roon 1"
+                                                    <TextBlock  Text="VaalM 8"
+            Foreground="White"
+            FontSize="15"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+                                                </Border>
+                                            </Button>
+
+                                            <Button Background="Transparent"
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="VaalM 9">
+
+                                                <Button.Style>
+                                                    <Style TargetType="Button">
+                                                        <Setter Property="Background" Value="Transparent"/>
+                                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                                        <Setter Property="Template">
+                                                            <Setter.Value>
+                                                                <ControlTemplate TargetType="Button">
+                                                                    <ContentPresenter/>
+                                                                </ControlTemplate>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </Style>
+                                                </Button.Style>
+
+                                                <Border Width="70"
+    Height="30"
+    CornerRadius="5"
+    Margin="5,5">
+                                                    <Border.Background>
+                                                        <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                                            <GradientStop Color="#B3845A" Offset="0.0"/>
+                                                            <GradientStop Color="#E0CFC5" Offset="1.0"/>
+                                                        </LinearGradientBrush>
+                                                    </Border.Background>
+                                                    <Border.Clip>
+                                                        <RectangleGeometry RadiusX="10" 
+                       RadiusY="10"
+                       Rect="0,0,70,30"/>
+                                                    </Border.Clip>
+                                                    <TextBlock  Text="VaalM 9"
+            Foreground="White"
+            FontSize="15"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+                                                </Border>
+                                            </Button>
+
+                                            <Button Background="Transparent"
+                                                    BorderBrush="Transparent"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Left"
+                                                    Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="VaalM 10">
+
+                                                <Button.Style>
+                                                    <Style TargetType="Button">
+                                                        <Setter Property="Background" Value="Transparent"/>
+                                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                                        <Setter Property="Template">
+                                                            <Setter.Value>
+                                                                <ControlTemplate TargetType="Button">
+                                                                    <ContentPresenter/>
+                                                                </ControlTemplate>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </Style>
+                                                </Button.Style>
+
+                                                <Border Width="80"
+    Height="30"
+    CornerRadius="5"
+    Margin="5,5">
+                                                    <Border.Background>
+                                                        <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                                            <GradientStop Color="#B3845A" Offset="0.0"/>
+                                                            <GradientStop Color="#E0CFC5" Offset="1.0"/>
+                                                        </LinearGradientBrush>
+                                                    </Border.Background>
+                                                    <Border.Clip>
+                                                        <RectangleGeometry RadiusX="10" 
+                       RadiusY="10"
+                       Rect="0,0,80,30"/>
+                                                    </Border.Clip>
+                                                    <TextBlock  Text="VaalM 10"
             Foreground="White"
             FontSize="15"
             HorizontalAlignment="Center"

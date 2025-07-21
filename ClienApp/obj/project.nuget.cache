@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "Kz19ItSraIw=",
+  "dgSpecHash": "wSxGyCOeDyM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hpie9\\Documents\\Client-App\\ClienApp\\ClienApp\\ClienApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\hpie9\\Source\\Repos\\ProfessionalClientApp\\ClienApp\\ClienApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hpie9\\.nuget\\packages\\microsoft.data.sqlite\\9.0.7\\microsoft.data.sqlite.9.0.7.nupkg.sha512",
+    "C:\\Users\\hpie9\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.7\\microsoft.data.sqlite.core.9.0.7.nupkg.sha512",
+    "C:\\Users\\hpie9\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.10\\sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\hpie9\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "C:\\Users\\hpie9\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\hpie9\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.10\\sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\hpie9\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }
