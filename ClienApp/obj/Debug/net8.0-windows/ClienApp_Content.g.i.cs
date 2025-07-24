@@ -10,6 +10,9 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/coleridge-st.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/handel-st.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/100x100/icons8-folder-100.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/50x50/icons8-home-50.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/icons8-back-94.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/olifantsrivier-st.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/verdi-st.jpg")]
 

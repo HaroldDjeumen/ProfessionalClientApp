@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="ClienApp.MVVM.View.NoteView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClienApp.MVVM.View" 
+             xmlns:core="clr-namespace:ClienApp.Core"
+             xmlns:viewmodel="clr-namespace:ClienApp.MVVM.ViewModel"    
+             d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="515" d:DesignWidth="710"
+             Background="Aqua">
+    <Grid>
+            
+    </Grid>
+</UserControl>

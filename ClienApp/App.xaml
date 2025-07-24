@@ -21,6 +21,14 @@
                 <view:PropertiesView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:GallaryViewModel}">
+                <view:GallaryView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:NoteViewModel}">
+                <view:NoteView/>
+            </DataTemplate>
+
             <DataTemplate DataType="{x:Type viewModel:HandelPropertyViewModel}">
                 <view:HandelPropertyView/>
             </DataTemplate>

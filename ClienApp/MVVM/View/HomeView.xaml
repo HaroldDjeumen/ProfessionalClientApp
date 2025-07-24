@@ -36,7 +36,7 @@
 
                     <Grid>
                         <StackPanel>
-                            <TextBlock Text="World leader&#x0a;in global finance"
+                            <TextBlock Text="Vaal Mall"
                                    Foreground="White"
                                    FontSize="28"
                                    Margin="20,10,10,0"/>
@@ -92,7 +92,7 @@
 
                     <Grid>
                         <StackPanel>
-                            <TextBlock Text="World leader&#x0a;in global finance"
+                            <TextBlock Text="Handel"
                            Foreground="White"
                            FontSize="28"
                            Margin="20,10,10,0"/>

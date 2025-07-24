@@ -30,13 +30,13 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Elysian"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       Foreground="White"
-                       FontSize="22"
-                       FontFamily="Fonts/#SpecialGothicExpandedOne"/>
-            
+            <Image Source="/Images/Icons/50x50/icons8-home-50.png"
+                   Width="50"
+                   Height="50"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Margin="10,15,0,0"/>
+
 
             <StackPanel Grid.Row="1">
 
@@ -55,17 +55,19 @@
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding PropertiesViewCommand}"/>
 
-                <RadioButton Content="Home"
+                <RadioButton Content="Notes"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding NoteViewCommand}"/>
 
-                <RadioButton Content="Home"
+                <RadioButton Content="Gallary"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding GallaryViewCommand}"/>
 
                 <RadioButton Content="Go Back"
                              Height="50"

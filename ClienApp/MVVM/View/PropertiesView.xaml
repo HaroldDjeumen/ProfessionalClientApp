@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ClienApp.MVVM.View" 
-             xmlns:core="clr-namespace:ClienApp.Core" 
+             xmlns:core="clr-namespace:ClienApp.Core"
              xmlns:viewmodel="clr-namespace:ClienApp.MVVM.ViewModel"    
              d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
              mc:Ignorable="d" 
@@ -22,7 +22,8 @@
                        HorizontalAlignment="Left"
                        Margin="0,0,0,20"/>
 
-            <Button Background="Transparent"
+            <Button x:Name="Handel"
+                    Background="Transparent"
                     BorderBrush="Transparent"
                     Padding="0"
                     HorizontalAlignment="Left"
@@ -623,7 +624,8 @@
                 
             </Button>
 
-            <Button Background="Transparent"
+            <Button x:Name="Verdi"
+                    Background="Transparent"
                     BorderBrush="Transparent"
                     Padding="0"
                     HorizontalAlignment="Left"
@@ -1085,7 +1087,8 @@ CommandParameter="Verdi 8">
                 
             </Button>
 
-            <Button Background="Transparent"
+            <Button x:Name="Sasol"
+                    Background="Transparent"
                     BorderBrush="Transparent"
                     Padding="0"
                     HorizontalAlignment="Left"
@@ -1545,7 +1548,8 @@ CommandParameter="Verdi 8">
                 </StackPanel>
             </Button>
 
-            <Button Background="Transparent"
+            <Button x:Name="VaalMall" 
+                    Background="Transparent"
                     BorderBrush="Transparent"
                     Padding="0"
                     HorizontalAlignment="Left"

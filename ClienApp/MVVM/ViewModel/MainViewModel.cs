@@ -18,6 +18,8 @@ namespace ClienApp.MVVM.ViewModel
         public RelayCommand VerdiPropertyViewCommand { get; set; }
         public RelayCommand OlifantPropertyViewCommand { get; set; }
         public RelayCommand ColeridgePropertyViewCommand { get; set; }
+        public RelayCommand GallaryViewCommand { get; set; }
+        public RelayCommand NoteViewCommand { get; set; }
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand RoomDetailViewCommand { get; set; }
         public RelayCommand PropertiesViewCommand { get; set; }
@@ -25,6 +27,8 @@ namespace ClienApp.MVVM.ViewModel
         public VerdiPropertyViewModel VerdiPropertyVM { get; set; }
         public OlifantPropertyViewModel OlifantPropertyVM { get; set; }
         public ColeridgePropertyViewModel ColeridgePropertyVM { get; set; }
+        public GallaryViewModel GallaryVM { get; set; }
+        public NoteViewModel NoteVM { get; set; }
         public HomeViewModel HomeVM { get; set; }
         public RoomDetailViewModel RoomDetailVM { get; set; }
         public PropertiesViewModel PropertiesVM { get; set; }
@@ -105,6 +109,8 @@ namespace ClienApp.MVVM.ViewModel
         {
             HomeVM = new HomeViewModel();
             PropertiesVM = new PropertiesViewModel();
+            GallaryVM = new GallaryViewModel();
+            NoteVM = new NoteViewModel();
             HandelPropertyVM = new HandelPropertyViewModel();
             VerdiPropertyVM = new VerdiPropertyViewModel();
             OlifantPropertyVM = new OlifantPropertyViewModel();
@@ -121,6 +127,16 @@ namespace ClienApp.MVVM.ViewModel
             PropertiesViewCommand = new RelayCommand(o =>
             {
                 CurrentView = PropertiesVM;
+            });
+
+            GallaryViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = GallaryVM;
+            });
+
+            NoteViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = NoteVM;
             });
 
             HandelPropertyViewCommand = new RelayCommand(o =>

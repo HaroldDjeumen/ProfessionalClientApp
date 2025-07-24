@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wSxGyCOeDyM=",
+  "dgSpecHash": "QRcExMA7t+g=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hpie9\\Source\\Repos\\ProfessionalClientApp\\ClienApp\\ClienApp.csproj",
+  "projectFilePath": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\ClienApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hpie9\\.nuget\\packages\\microsoft.data.sqlite\\9.0.7\\microsoft.data.sqlite.9.0.7.nupkg.sha512",
     "C:\\Users\\hpie9\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.7\\microsoft.data.sqlite.core.9.0.7.nupkg.sha512",

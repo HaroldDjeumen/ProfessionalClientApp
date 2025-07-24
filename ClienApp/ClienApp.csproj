@@ -11,6 +11,9 @@
   <ItemGroup>
     <None Remove="Images\Coleridge-St.jpg" />
     <None Remove="Images\Handel-St.jpg" />
+    <None Remove="Images\Icons\100x100\icons8-folder-100.png" />
+    <None Remove="Images\Icons\50x50\icons8-home-50.png" />
+    <None Remove="Images\Icons\icons8-back-94.png" />
     <None Remove="Images\Olifantsrivier-St.jpg" />
     <None Remove="Images\Verdi-St.jpg" />
   </ItemGroup>
@@ -20,6 +23,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Handel-St.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Icons\100x100\icons8-folder-100.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Icons\50x50\icons8-home-50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Icons\icons8-back-94.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Olifantsrivier-St.jpg">

@@ -114,3 +114,10 @@ C:\Users\hpie9\Source\Repos\ProfessionalClientApp\ClienApp\obj\Debug\net8.0-wind
 C:\Users\hpie9\Source\Repos\ProfessionalClientApp\ClienApp\obj\Debug\net8.0-windows\MVVM\View\RoomDetailView.g.cs
 C:\Users\hpie9\Source\Repos\ProfessionalClientApp\ClienApp\obj\Debug\net8.0-windows\MVVM\View\RoomDetailView.baml
 C:\Users\hpie9\Source\Repos\ProfessionalClientApp\ClienApp\obj\Debug\net8.0-windows\ClienApp.csproj.Up2Date
+C:\Users\hpie9\source\repos\ProfessionalClientApp\ClienApp\obj\Debug\net8.0-windows\MVVM\View\GallaryView.g.cs
+C:\Users\hpie9\source\repos\ProfessionalClientApp\ClienApp\obj\Debug\net8.0-windows\MVVM\View\GallaryView.baml
+C:\Users\hpie9\source\repos\ProfessionalClientApp\ClienApp\obj\Debug\net8.0-windows\MVVM\View\NoteView.g.cs
+C:\Users\hpie9\source\repos\ProfessionalClientApp\ClienApp\obj\Debug\net8.0-windows\MVVM\View\NoteView.baml
+C:\Users\hpie9\source\repos\ProfessionalClientApp\ClienApp\bin\Debug\net8.0-windows\Images\Icons\100x100\icons8-folder-100.png
+C:\Users\hpie9\source\repos\ProfessionalClientApp\ClienApp\bin\Debug\net8.0-windows\Images\Icons\icons8-back-94.png
+C:\Users\hpie9\source\repos\ProfessionalClientApp\ClienApp\bin\Debug\net8.0-windows\Images\Icons\50x50\icons8-home-50.png

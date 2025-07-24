@@ -1,0 +1,673 @@
+﻿<UserControl x:Class="ClienApp.MVVM.View.GallaryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClienApp.MVVM.View" 
+             xmlns:core="clr-namespace:ClienApp.Core"
+             xmlns:viewmodel="clr-namespace:ClienApp.MVVM.ViewModel"    
+             d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="515" d:DesignWidth="710">
+
+
+    <StackPanel>
+
+        <Button x:Name="Properties"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Padding="0"
+                HorizontalAlignment="Left"
+                Visibility="Visible"
+                Click="Properties_Click">
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <ContentPresenter/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            
+            <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                <WrapPanel Margin="10">
+
+                    <Button x:Name="HomeHandel"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Visible"
+                            Click="HomeHandel_Click">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        
+                        <StackPanel Margin="18,18,9,18" Width="100" Cursor="Hand">
+                            <Image Source="/Images/Icons/100x100/icons8-folder-100.png" Width="100" Height="100"/>
+                            <TextBlock Text="Handel" Foreground="White" FontWeight="SemiBold" FontSize="16"
+                           HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="HomeSasol"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Visible"
+                            Click="HomeSasol_Click">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        
+                        <StackPanel Margin="18,18,9,18" Width="100" Cursor="Hand">
+                            <Image Source="/Images/Icons/100x100/icons8-folder-100.png" Width="100" Height="100"/>
+                            <TextBlock Text="Sasol" Foreground="White" FontWeight="SemiBold" FontSize="16"
+                           HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="HomeVaalMall"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Visible"
+                            Click="HomeVaalMall_Click">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        <StackPanel Margin="18,18,9,18" Width="100" Cursor="Hand">
+                            <Image Source="/Images/Icons/100x100/icons8-folder-100.png" Width="100" Height="100"/>
+                            <TextBlock Text="Vaal Mall" Foreground="White" FontWeight="SemiBold" FontSize="16"
+                           HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="HomeVerdi"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Visible"
+                            Click="HomeVerdi_Click">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        
+                        <StackPanel Margin="18,18,9,18" Width="100" Cursor="Hand">
+                            <Image Source="/Images/Icons/100x100/icons8-folder-100.png" Width="100" Height="100"/>
+                            <TextBlock Text="Verdi" Foreground="White" FontWeight="SemiBold" FontSize="16"
+                           HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="Reciepts"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Visible"
+                            Click="Reciepts_Click">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        
+                        <StackPanel Margin="18,18,9,18" Width="100" Cursor="Hand">
+                            <Image Source="/Images/Icons/100x100/icons8-folder-100.png" Width="100" Height="100"/>
+                            <TextBlock Text="Reciepts" Foreground="White" FontWeight="SemiBold" FontSize="16"
+                           HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
+
+
+                </WrapPanel>
+            </ScrollViewer>
+        </Button>
+
+
+        <Button x:Name="Handel"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Padding="0"
+                HorizontalAlignment="Left"
+                Visibility="Collapsed"
+                Click="Handel_Click">
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <ContentPresenter/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            
+            <ScrollViewer VerticalScrollBarVisibility="Hidden" >
+                <StackPanel>
+
+                <WrapPanel Margin="10">
+                    <!-- Example Folder Template -->
+
+                        <Button x:Name="HandelWater"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Padding="0"
+                                HorizontalAlignment="Left"
+                                Click="HandelWater_Click">
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                            <StackPanel Margin="18,18,9,18" Width="100" Cursor="Hand">
+                                <Image Source="/Images/Icons/100x100/icons8-folder-100.png" Width="100" Height="100"/>
+                                <TextBlock Text="Water Meter" Foreground="White" FontWeight="SemiBold" FontSize="16"
+                                           HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Button>
+
+
+                        <Button x:Name="HandelElec"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Padding="0"
+                                HorizontalAlignment="Left"
+                                Click="HandelElec_Click">
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                            <StackPanel Margin="18,18,9,18" Width="100" Cursor="Hand">
+                                <Image Source="/Images/Icons/100x100/icons8-folder-100.png" Width="100" Height="100"/>
+                                <TextBlock Text="Electricity" Foreground="White" FontWeight="SemiBold" FontSize="16"
+                    HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Button>
+
+                    </WrapPanel>
+
+                    <Button x:Name="Backbutton"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Visible"
+                            Click="Backbutton_Click"
+                            Margin="20,250,0,0"
+                            Cursor="Hand">
+
+                        <Button.Style>
+                            <Style TargetType="Button" >
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        <Image Source="/Images/Icons/icons8-back-94.png" Width="30" Height="30" />
+                    </Button>
+                    
+                </StackPanel>
+
+            </ScrollViewer>
+        </Button>
+
+        <Button x:Name="Verdi"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Padding="0"
+                HorizontalAlignment="Left"
+                Visibility="Collapsed"
+                Click="Verdi_Click">
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <ContentPresenter/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            
+            <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                <StackPanel>
+
+                    <WrapPanel Margin="10">
+                        <!-- Example Folder Template -->
+
+                        <Button x:Name="VerilWater"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Padding="0"
+                                HorizontalAlignment="Left"
+                                Click="VerdiWater_Click">
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                            <StackPanel Margin="18,18,9,18" Width="100" Cursor="Hand">
+                                <Image Source="/Images/Icons/100x100/icons8-folder-100.png" Width="100" Height="100"/>
+                                <TextBlock Text="Water Meter" Foreground="White" FontWeight="SemiBold" FontSize="16"
+                HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button x:Name="VerdiElec"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Padding="0"
+                                HorizontalAlignment="Left"
+                                Click="VerdiElec_Click">
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                            <StackPanel Margin="18,18,9,18" Width="100" Cursor="Hand">
+                                <Image Source="/Images/Icons/100x100/icons8-folder-100.png" Width="100" Height="100"/>
+                                <TextBlock Text="Electricity" Foreground="White" FontWeight="SemiBold" FontSize="16"
+                HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Button>
+
+                    </WrapPanel>
+
+                    <Button x:Name="Backbutton2"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Visible"
+                            Click="Backbutton_Click"
+                            Margin="20,250,0,0"
+                            Cursor="Hand">
+
+                        <Button.Style>
+                            <Style TargetType="Button" >
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        <Image Source="/Images/Icons/icons8-back-94.png" Width="30" Height="30" />
+                    </Button>
+                    
+                </StackPanel>
+            </ScrollViewer>
+        </Button>
+
+        <Button x:Name="Sasol"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Padding="0"
+                HorizontalAlignment="Left"
+                Visibility="Collapsed"
+                Click="Sasol_Click">
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <ContentPresenter/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            
+            <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                <StackPanel>
+                    <WrapPanel Margin="10">
+                        <!-- Example Folder Template -->
+
+                        <Button x:Name="SasolWater"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Padding="0"
+                                HorizontalAlignment="Left"
+                                Click="SasolWater_Click">
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                            <StackPanel Margin="18,18,9,18" Width="100" Cursor="Hand">
+                                <Image Source="/Images/Icons/100x100/icons8-folder-100.png" Width="100" Height="100"/>
+                                <TextBlock Text="Water Meter" Foreground="White" FontWeight="SemiBold" FontSize="16"
+                HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button x:Name="SasolElec"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Padding="0"
+                                HorizontalAlignment="Left"
+                                Click="SasolElec_Click">
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                            <StackPanel Margin="18,18,9,18" Width="100" Cursor="Hand">
+                                <Image Source="/Images/Icons/100x100/icons8-folder-100.png" Width="100" Height="100"/>
+                                <TextBlock Text="Electricity" Foreground="White" FontWeight="SemiBold" FontSize="16"
+                HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Button>
+
+                    </WrapPanel>
+
+                    <Button x:Name="Backbutton3"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Visible"
+                            Click="Backbutton_Click"
+                            Margin="20,250,0,0"
+                            Cursor="Hand">
+
+                        <Button.Style>
+                            <Style TargetType="Button" >
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        <Image Source="/Images/Icons/icons8-back-94.png" Width="30" Height="30" />
+                    </Button>
+                    
+                </StackPanel>
+            </ScrollViewer>
+        </Button>
+
+        <Button x:Name="VaalMall"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Padding="0"
+                HorizontalAlignment="Left"
+                Visibility="Collapsed"
+                Click="VaalMall_Click">
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <ContentPresenter/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            
+            <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                <StackPanel>
+                    <WrapPanel Margin="10">
+                        <!-- Example Folder Template -->
+
+                        <Button x:Name="VaalMallWater"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Padding="0"
+                                HorizontalAlignment="Left"
+                                Click="VaalMallWater_Click">
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                            <StackPanel Margin="18,18,9,18" Width="100" Cursor="Hand">
+                                <Image Source="/Images/Icons/100x100/icons8-folder-100.png" Width="100" Height="100"/>
+                                <TextBlock Text="Water Meter" Foreground="White" FontWeight="SemiBold" FontSize="16"
+                HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Button>
+
+
+                        <Button x:Name="VaalMallElec"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Padding="0"
+                                HorizontalAlignment="Left"
+                                Click="VaalMallElec_Click">
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+
+                            <StackPanel Margin="18,18,9,18" Width="100" Cursor="Hand">
+                                <Image Source="/Images/Icons/100x100/icons8-folder-100.png" Width="100" Height="100"/>
+                                <TextBlock Text="Electricity" Foreground="White" FontWeight="SemiBold" FontSize="16"
+                HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Button>
+
+                    </WrapPanel>
+
+                    <Button x:Name="Backbutton4"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Visible"
+                            Click="Backbutton_Click"
+                            Margin="20,250,0,0"
+                            Cursor="Hand">
+
+                        <Button.Style>
+                            <Style TargetType="Button" >
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        <Image Source="/Images/Icons/icons8-back-94.png" Width="30" Height="30" />
+                    </Button>
+                    
+                </StackPanel>
+            </ScrollViewer>
+        </Button>
+
+    </StackPanel>
+
+</UserControl>
