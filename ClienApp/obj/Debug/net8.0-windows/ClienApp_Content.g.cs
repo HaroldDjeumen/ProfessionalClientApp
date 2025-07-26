@@ -8,11 +8,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/imagestorage.db")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/notes.db")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/propertyrooms.db")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/coleridge-st.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/handel-st.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/100x100/icons8-builder-100.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/100x100/icons8-cleaner-100.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/100x100/icons8-folder-100.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/100x100/icons8-future-100.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/100x100/icons8-house-100.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/50x50/icons8-home-50.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/50x50/icons8-plus-50.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/50x50/icons8-trash-50.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/icons8-back-94.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/icons8-left-94.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/icons8-menu-94.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/olifantsrivier-st.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/verdi-st.jpg")]
 

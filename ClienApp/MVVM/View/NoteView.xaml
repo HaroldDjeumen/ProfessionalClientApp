@@ -8,9 +8,400 @@
              xmlns:viewmodel="clr-namespace:ClienApp.MVVM.ViewModel"    
              d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
              mc:Ignorable="d" 
-             d:DesignHeight="515" d:DesignWidth="710"
-             Background="Aqua">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="515" d:DesignWidth="700">
+
+    <ScrollViewer>
+        <ScrollViewer.Resources>
+            <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}"/>
+        </ScrollViewer.Resources>
+
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Width="350" x:Name="Properties">
+                    <TextBlock Text="Properties" FontSize="24" Foreground="White" Margin="30,0,0,0"/>
+                    <ComboBox x:Name="PropertiesComboBox"
+                      Width="300"
+                      Margin="10,10,10,0"
+                      Height="30"
+                      HorizontalAlignment="Center"
+                      SelectionChanged="PropertiesComboBox_SelectionChanged"
+                      Style="{StaticResource CustomComboBoxStyle}">
+                        <ComboBoxItem Content="Handel"/>
+                        <ComboBoxItem Content="Verdi"/>
+                        <ComboBoxItem Content="Sasol"/>
+                        <ComboBoxItem Content="Vaal Mall"/>
+                    </ComboBox>
+                    <StackPanel x:Name="RoomNameBox"
+                        Height="30"
+                        Width="298"
+                        Margin="10,10,10,0"
+                        Background="#3f3d52">
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Button x:Name="AddNote"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Visible"
+                            Margin="24,0,0,0"
+                            Cursor="Hand"
+                            VerticalAlignment="Top"
+                            Click="AddButton_clicked">
+
+                                <Button.Style>
+                                    <Style TargetType="Button" >
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <ContentPresenter/>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Button.Style>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Images/Icons/50x50/icons8-plus-50.png"
+                           Width="20"
+                           Height="20"
+                           VerticalAlignment="Center"
+                                   Margin="5"/>
+                                    <TextBlock Text="Add Note"
+                               FontSize="16"
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               Margin="0,2,5,5"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button x:Name="RemoveNotes"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Visible"
+                            Margin="15,0,0,0"
+                            Cursor="Hand"
+                            VerticalAlignment="Top"
+                            Click="RemoveButton_clicked">
+
+                                <Button.Style>
+                                    <Style TargetType="Button" >
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <ContentPresenter/>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Button.Style>
+                                <StackPanel Orientation="Horizontal" >
+
+                                    <Image Source="/Images/Icons/50x50/icons8-trash-50.png"
+                               Width="20"
+                               Height="20"
+                               VerticalAlignment="Center"
+                               Margin="5"/>
+                                    <TextBlock Text="Remove Note"
+                                   FontSize="16"
+                                   Foreground="White"
+                                   VerticalAlignment="Center"
+                                   Margin="0,2,5,5"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+
+                    </StackPanel>
+
+                    <ListBox x:Name="PropertyListBox"
+                     Width="298"
+                     Height="300"
+                     Margin="0"
+                     Background="#3f3d52"
+                     BorderBrush="#22202f"
+                     BorderThickness="0,2,0,0"
+                     Foreground="#3a403a"
+                     FontSize="14"
+                     SelectionMode="Single">
+                        <ListBox.Resources>
+                            <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}" />
+                        </ListBox.Resources>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" TextWrapping="Wrap" Margin="5" FontSize="16" Foreground="White"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+
+                <StackPanel Width="350" x:Name="Rooms">
+                    <TextBlock Text="Rooms" FontSize="24" Foreground="White" Margin="30,0,0,0"/>
+                    <ComboBox x:Name="RoomsComboBox" 
+                      Width="300" 
+                      Margin="10,10,10,0" 
+                      Height="30" 
+                      HorizontalAlignment="Center" 
+                      Style="{StaticResource CustomComboBoxStyle}"
+                      SelectionChanged="RoomsComboBox_SelectionChanged"/>
+                    <StackPanel x:Name="PropertyNameBox"
+                        Height="30"
+                        Width="298"
+                        Margin="10,10,10,0"
+                        Background="#3f3d52">
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Button x:Name="AddNote2"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Visible"
+                            Margin="24,0,0,0"
+                            Cursor="Hand"
+                            VerticalAlignment="Top"
+                            Click="AddButton_clicked">
+
+                                <Button.Style>
+                                    <Style TargetType="Button" >
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <ContentPresenter/>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Button.Style>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Images/Icons/50x50/icons8-plus-50.png"
+                                   Width="20"
+                                   Height="20"
+                                   VerticalAlignment="Center"
+                                   Margin="5"/>
+                                    <TextBlock Text="Add Note"
+                                       FontSize="16"
+                                       Foreground="White"
+                                       VerticalAlignment="Center"
+                                       Margin="0,2,5,5"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button x:Name="RemoveNotes2"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Visibility="Visible"
+                            Margin="15,0,0,0"
+                            Cursor="Hand"
+                            VerticalAlignment="Top"
+                            Click="RemoveButton_clicked">
+
+                                <Button.Style>
+                                    <Style TargetType="Button" >
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <ContentPresenter/>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Button.Style>
+                                <StackPanel Orientation="Horizontal" >
+
+                                    <Image Source="/Images/Icons/50x50/icons8-trash-50.png"
+                                   Width="20"
+                                   Height="20"
+                                   VerticalAlignment="Center"
+                                   Margin="5"/>
+                                    <TextBlock Text="Remove Note"
+                                       FontSize="16"
+                                       Foreground="White"
+                                       VerticalAlignment="Center"
+                                       Margin="0,2,5,5"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                    <ListBox x:Name="RoomListBox"
+                     Width="298"
+                     Height="300"
+                     Margin="0"
+                     Background="#3f3d52"
+                     BorderBrush="#22202f"
+                     BorderThickness="0,2,0,0"
+                     Foreground="#3a403a"
+                     FontSize="14"
+                     SelectionMode="Single">
+                        <ListBox.Resources>
+                            <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}" />
+                        </ListBox.Resources>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" TextWrapping="Wrap" Margin="5" FontSize="16" Foreground="White"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+
+            </StackPanel>
+
+            <StackPanel Width="700" x:Name="Others" Height="423" Margin="0,0,0,20">
+                <TextBlock Text="Other Important Notes" FontSize="24" Foreground="White" Margin="30,30,0,0"/>
+                <ComboBox x:Name="OtherComboBox"
+                          Width="650"
+                          Margin="10,10,10,0"
+                          Height="30"
+                          HorizontalAlignment="Center"
+                          SelectionChanged="OtherComboBox_SelectionChanged"
+                          Style="{StaticResource CustomComboBoxStyle}">
+                    <ComboBoxItem Content="Workers"/>
+                    <ComboBoxItem Content="Repairs Needed"/>
+                    <ComboBoxItem Content="Rooms needing to be cleaned "/>
+                    <ComboBoxItem Content="Furture Objectives"/>
+                </ComboBox>
+                <StackPanel x:Name="OtherNameBox"
+                            Height="30"
+                            Width="650"
+                            Margin="10,10,10,0"
+                            Background="#3f3d52">
+
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <Button x:Name="AddNote3"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Padding="0"
+                                HorizontalAlignment="Left"
+                                Visibility="Visible"
+                                Margin="24,0,0,0"
+                                Cursor="Hand"
+                                VerticalAlignment="Top"
+                                Click="AddButton_clicked">
+
+                            <Button.Style>
+                                <Style TargetType="Button" >
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Images/Icons/50x50/icons8-plus-50.png"
+                                       Width="20"
+                                       Height="20"
+                                       VerticalAlignment="Center"
+                                       Margin="5"/>
+                                <TextBlock Text="Add Note"
+                                           FontSize="16"
+                                           Foreground="White"
+                                           VerticalAlignment="Center"
+                                           Margin="0,2,5,5"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button x:Name="RemoveNotes3"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Padding="0"
+                                HorizontalAlignment="Left"
+                                Visibility="Visible"
+                                Margin="15,0,0,0"
+                                Cursor="Hand"
+                                VerticalAlignment="Top"
+                                Click="RemoveButton_clicked">
+
+                            <Button.Style>
+                                <Style TargetType="Button" >
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                            <StackPanel Orientation="Horizontal" >
+
+                                <Image Source="/Images/Icons/50x50/icons8-trash-50.png"
+                                       Width="20"
+                                       Height="20"
+                                       VerticalAlignment="Center"
+                                       Margin="5"/>
+                                <TextBlock Text="Remove Note"
+                                           FontSize="16"
+                                           Foreground="White"
+                                           VerticalAlignment="Center"
+                                           Margin="0,2,5,5"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+
+
+                </StackPanel>
+                <Border Width="650"
+                        Height="280"
+                        CornerRadius="0,0,10,10"
+                        Background="#3f3d52"
+                        Margin="0,0,0,5"
+                        BorderBrush="#22202f"
+                        BorderThickness="0,2,0,0"
+                        SnapsToDevicePixels="True"
+                        ClipToBounds="True">
+
+                    <ListBox x:Name="OtherListBox"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Foreground="#3a403a"
+                             FontSize="14"
+                             SelectionMode="Single"
+                             Width="650"
+                             Height="280">
+
+                        <ListBox.Resources>
+                            <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}" />
+                        </ListBox.Resources>
+
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" 
+                                           TextWrapping="Wrap" 
+                                           Margin="5" 
+                                           FontSize="16" 
+                                           Foreground="White"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+
 </UserControl>

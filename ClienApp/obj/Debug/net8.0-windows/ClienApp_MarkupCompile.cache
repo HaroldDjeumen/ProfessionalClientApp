@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\hpie9\source\repos\ProfessionalClientApp\ClienApp\App.xaml
-13493065503
-7-812091869
+14462021478
+18-1309285872
 28-774965049
-202945797946
-MainWindow.xaml;MVVM\View\ColeridgePropertyView.xaml;MVVM\View\GallaryView.xaml;MVVM\View\HandelPropertyView.xaml;MVVM\View\HomeView.xaml;MVVM\View\NoteView.xaml;MVVM\View\OlifantPropertyView.xaml;MVVM\View\PropertiesView.xaml;MVVM\View\RoomDetailView.xaml;MVVM\View\VerdiPropertyView.xaml;Theme\MenuButtonTheme.xaml;Theme\ScrollTheme.xaml;Theme\TextboxTheme.xaml;
+203693935869
+MainWindow.xaml;MVVM\View\ColeridgePropertyView.xaml;MVVM\View\GallaryView.xaml;MVVM\View\HandelPropertyView.xaml;MVVM\View\HomeView.xaml;MVVM\View\NoteView.xaml;MVVM\View\OlifantPropertyView.xaml;MVVM\View\PropertiesView.xaml;MVVM\View\RoomDetailView.xaml;MVVM\View\VerdiPropertyView.xaml;Theme\ComboBoxTheme.xaml;Theme\MenuButtonTheme.xaml;Theme\ScrollbarTheme.xaml;Theme\TextboxTheme.xaml;
 
 False
 

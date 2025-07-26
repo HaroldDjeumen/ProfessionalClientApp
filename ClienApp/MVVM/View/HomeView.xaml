@@ -5,9 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ClienApp.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <ScrollViewer VerticalScrollBarVisibility="Hidden">
-    <StackPanel>
+             d:DesignHeight="450" d:DesignWidth="700">
+    <ScrollViewer VerticalScrollBarVisibility="Auto"
+               HorizontalScrollBarVisibility="Disabled">
+
+        <ScrollViewer.Resources>
+            <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}"/>
+        </ScrollViewer.Resources>
+        <StackPanel>
         
             <TextBlock Text="Discover"
                    Foreground="White"
@@ -135,11 +140,11 @@
                     </Style>
                 </StackPanel.Resources>
 
-                <TextBlock Text="Explore Features"
+                <TextBlock Text="Stay ahead by keeping notes on..."
                        Foreground="White"
-                       FontSize="20"
+                       FontSize="24"
                        HorizontalAlignment="Left"
-                       Margin="0,0,0,10"/>
+                       Margin="0,20,0,20"/>
 
                 <StackPanel Orientation="Horizontal">
 
@@ -147,25 +152,53 @@
                         Height="150"
                         Background="#844eff"
                         CornerRadius="10"
-                        />
+                        >
+                        <StackPanel>
+                            <Image Source="/Images/Icons/100x100/icons8-builder-100.png"
+                                   Width="100"
+                                   Margin="0,5,0,0"/>
+                            <TextBlock Text="Worker" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" Foreground="White"/>
+                        </StackPanel>
+                    </Border>
 
                     <Border Width="150"
                         Height="150"
                         Background="Red"
                         CornerRadius="10"
-                        />
+                        >
+                        <StackPanel>
+                            <Image Source="/Images/Icons/100x100/icons8-cleaner-100.png"
+                                   Width="100"
+                                   Margin="0,5,0,0"/>
+                            <TextBlock Text="Room Cleaning" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" Foreground="White"/>
+                        </StackPanel>
+                    </Border>
 
                     <Border Width="150"
                         Height="150"
-                        Background="Beige"
+                        Background="IndianRed"
                         CornerRadius="10"
-                        />
+                        >
+                        <StackPanel>
+                            <Image Source="/Images/Icons/100x100/icons8-house-100.png"
+                                   Width="100"
+                                   Margin="0,5,0,0"/>
+                            <TextBlock Text="Properties" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" Foreground="White"/>
+                        </StackPanel>
+                    </Border>
 
                     <Border Width="150"
                         Height="150"
                         Background="Firebrick"
                         CornerRadius="10"
-                        />
+                        >
+                        <StackPanel>
+                            <Image Source="/Images/Icons/100x100/icons8-future-100.png"
+                                   Width="100"
+                                   Margin="0,5,0,0"/>
+                            <TextBlock Text="Future Plans" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="White"/>
+                        </StackPanel>
+                    </Border>
 
                 </StackPanel>
 

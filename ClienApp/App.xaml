@@ -10,7 +10,9 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/TextboxTheme.xaml"/>
-                <ResourceDictionary Source="Theme/ScrollTheme.xaml"/>
+                <ResourceDictionary Source="/Theme/ScrollbarTheme.xaml"/>
+                <ResourceDictionary Source="/Theme/ComboBoxTheme.xaml"/>
+                <ResourceDictionary Source="/Theme/ScrollbarTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">

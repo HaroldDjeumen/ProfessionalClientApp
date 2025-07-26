@@ -25,11 +25,6 @@ namespace ClienApp.MVVM.View
             InitializeComponent();
         }
 
-        private void Properties_Click(object sender)
-        {
-
-        }
-
         private void Handel_Click(object sender, RoutedEventArgs e)
         {
 
@@ -38,6 +33,16 @@ namespace ClienApp.MVVM.View
         private void Verdi_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Sasol_Click(object sender, RoutedEventArgs e)
+        {
+            // optional
+        }
+
+        private void VaalMall_Click(object sender, RoutedEventArgs e)
+        {
+            // optional
         }
         private void Properties_Click(object sender, RoutedEventArgs e)
         {
@@ -91,15 +96,7 @@ namespace ClienApp.MVVM.View
         
         
 
-        private void Sasol_Click(object sender, RoutedEventArgs e)
-        {
-            // optional
-        }
-
-        private void VaalMall_Click(object sender, RoutedEventArgs e)
-        {
-            // optional
-        }
+        
 
         private void Backbutton_Click(object sender, RoutedEventArgs e)
         {
@@ -146,6 +143,21 @@ namespace ClienApp.MVVM.View
         }
 
         private void VaalMallElec_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NewFile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NewImage_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NewFolder_Click(object sender, RoutedEventArgs e)
         {
 
         }
