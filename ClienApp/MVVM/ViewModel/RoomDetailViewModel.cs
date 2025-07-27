@@ -1,5 +1,5 @@
-﻿using ClienApp.Core;
-using ClienApp.MVVM.Model;
+﻿using ClientApp.Core;
+using ClientApp.MVVM.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace ClienApp.MVVM.ViewModel
+namespace ClientApp.MVVM.ViewModel
 {
     internal class RoomDetailViewModel : ObservableObject
     {

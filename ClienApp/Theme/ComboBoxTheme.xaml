@@ -72,7 +72,7 @@
                                 BorderThickness="1"
                                 CornerRadius="0,0,5,5"
                                 SnapsToDevicePixels="True">
-                                    <ScrollViewer MaxHeight="340" Width="298" MaxWidth="700" CanContentScroll="True">
+                                    <ScrollViewer MaxHeight="335" Width="298" MaxWidth="700" CanContentScroll="True">
                                         <ScrollViewer.Resources>
                                             <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}"/>
                                         </ScrollViewer.Resources>

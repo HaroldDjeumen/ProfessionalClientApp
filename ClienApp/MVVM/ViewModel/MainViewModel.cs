@@ -1,10 +1,12 @@
-﻿using ClienApp.Core;
-using ClienApp.MVVM.Model;
+﻿using ClientApp.Core;
+using ClientApp.MVVM.Model;
+using ClientApp.MVVM.ViewModel;
 using System.Data.SQLite;
 using System.IO;
 using System.Windows;
+using System.Windows.Input;
 
-namespace ClienApp.MVVM.ViewModel
+namespace ClientApp.MVVM.ViewModel
 {
     internal class MainViewModel : ObservableObject
     {
@@ -21,6 +23,10 @@ namespace ClienApp.MVVM.ViewModel
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand RoomDetailViewCommand { get; set; }
         public RelayCommand PropertiesViewCommand { get; set; }
+        public RelayCommand ColeridgeImageViewCommand {get; set;}
+
+        public RelayCommand VerdiImageViewCommand { get; set; }
+        public RelayCommand OlifantImageViewCommand { get; set; }
 
         // ViewModels
         public HandelPropertyViewModel HandelPropertyVM { get; set; }
@@ -33,8 +39,27 @@ namespace ClienApp.MVVM.ViewModel
         public RoomDetailViewModel RoomDetailVM { get; set; }
         public PropertiesViewModel PropertiesVM { get; set; }
 
+        public ColeridgeImageViewModel ColeridgeImageVM { get; set; }
+        public HandelImageViewModel HandelImageVM { get; set; }
+        public VerdiImageViewModel VerdiImageVM { get; set; }
+        public OlifantImageViewModel OlifantImageVM { get; set; }
+
+        public ICommand HandelImageViewCommand { get; set; }
+
         private object _currentView;
         private bool _canGoBack;
+
+        private string _selectedHandelColumn;
+
+        public string SelectedHandelColumn
+        {
+            get => _selectedHandelColumn;
+            set
+            {
+                _selectedHandelColumn = value;
+                OnPropertyChanged(nameof(SelectedHandelColumn));
+            }
+        }
 
         public bool CanGoBack
         {
@@ -114,6 +139,9 @@ namespace ClienApp.MVVM.ViewModel
             OlifantPropertyVM = new OlifantPropertyViewModel();
             ColeridgePropertyVM = new ColeridgePropertyViewModel();
             RoomDetailVM = new RoomDetailViewModel();
+            ColeridgeImageVM = new ColeridgeImageViewModel();
+            VerdiImageVM = new VerdiImageViewModel();
+            OlifantImageVM = new OlifantImageViewModel();
 
             // Default view
             CurrentView = HomeVM;
@@ -121,11 +149,25 @@ namespace ClienApp.MVVM.ViewModel
             HomeViewCommand = new RelayCommand(o => CurrentView = HomeVM);
             PropertiesViewCommand = new RelayCommand(o => CurrentView = PropertiesVM);
             GallaryViewCommand = new RelayCommand(o => CurrentView = GallaryVM);
+            ColeridgeImageViewCommand = new RelayCommand(o => CurrentView = ColeridgeImageVM);
+            VerdiImageViewCommand = new RelayCommand(o => CurrentView = VerdiImageVM);
+            OlifantImageViewCommand = new RelayCommand(o => CurrentView = OlifantImageVM);
             NoteViewCommand = new RelayCommand(o => CurrentView = NoteVM);
             HandelPropertyViewCommand = new RelayCommand(o => CurrentView = HandelPropertyVM);
             VerdiPropertyViewCommand = new RelayCommand(o => CurrentView = VerdiPropertyVM);
             OlifantPropertyViewCommand = new RelayCommand(o => CurrentView = OlifantPropertyVM);
             ColeridgePropertyViewCommand = new RelayCommand(o => CurrentView = ColeridgePropertyVM);
+
+            HandelImageViewCommand = new RelayCommand(o =>
+            {
+                string selectedFolder = o as string;
+                if (!string.IsNullOrEmpty(selectedFolder))
+                {
+                    HandelImageVM = new HandelImageViewModel(selectedFolder);
+                    CurrentView = HandelImageVM;
+                }
+            });
+
             RoomDetailViewCommand = new RelayCommand(o =>
             {
                 if (o is string roomName)

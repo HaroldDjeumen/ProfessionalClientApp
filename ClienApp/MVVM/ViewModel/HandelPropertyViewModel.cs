@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClienApp.MVVM.ViewModel
+namespace ClientApp.MVVM.ViewModel
 {
     class HandelPropertyViewModel
     {

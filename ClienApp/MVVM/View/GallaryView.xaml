@@ -1,11 +1,11 @@
-﻿<UserControl x:Class="ClienApp.MVVM.View.GallaryView"
+﻿<UserControl x:Class="ClientApp.MVVM.View.GallaryView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ClienApp.MVVM.View" 
-             xmlns:core="clr-namespace:ClienApp.Core"
-             xmlns:viewmodel="clr-namespace:ClienApp.MVVM.ViewModel"    
+             xmlns:local="clr-namespace:ClientApp.MVVM.View" 
+             xmlns:core="clr-namespace:ClientApp.Core"
+             xmlns:viewmodel="clr-namespace:ClientApp.MVVM.ViewModel"    
              d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="515" d:DesignWidth="700">
@@ -16,12 +16,6 @@
                 Width="Auto"
                 Height="Auto"
                 CornerRadius="10">
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
-                    <GradientStop Color="#EFC0B0" Offset="0.0"/>
-                    <GradientStop Color="#5D2A29" Offset="0.3"/>
-                </LinearGradientBrush>
-            </Border.Background>
             <Border.Clip>
                 <RectangleGeometry RadiusX="10" 
                        RadiusY="10"
@@ -442,7 +436,9 @@
                                 BorderBrush="Transparent"
                                 Padding="0"
                                 HorizontalAlignment="Left"
-                                Click="HandelWater_Click">
+                                Click="HandelWater_Click"
+                                Command="{Binding HandelImageViewCommand}"
+                                CommandParameter="Water Meter">
 
                             <Button.Style>
                                 <Style TargetType="Button">
@@ -471,7 +467,9 @@
                                 BorderBrush="Transparent"
                                 Padding="0"
                                 HorizontalAlignment="Left"
-                                Click="HandelElec_Click">
+                                Click="HandelElec_Click"
+                                Command="{Binding HandelImageViewCommand}"
+                                CommandParameter="Electricity">
 
                             <Button.Style>
                                 <Style TargetType="Button">

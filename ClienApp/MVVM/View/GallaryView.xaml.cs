@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ClienApp.MVVM.View
+namespace ClientApp.MVVM.View
 {
     /// <summary>
     /// Interaction logic for GallaryView.xaml

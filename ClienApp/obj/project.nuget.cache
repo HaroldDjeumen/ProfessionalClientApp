@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FgcdiZYzLoY=",
+  "dgSpecHash": "rmO+qFgajz4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\ClienApp.csproj",
+  "projectFilePath": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\ClientApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hpie9\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\hpie9\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

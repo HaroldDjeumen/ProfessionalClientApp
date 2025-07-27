@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace ClienApp
+namespace ClientApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

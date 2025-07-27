@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClienApp.MVVM.Model
+namespace ClientApp.MVVM.Model
 {
     class NoteModel
     {

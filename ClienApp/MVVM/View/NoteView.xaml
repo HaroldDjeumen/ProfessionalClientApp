@@ -1,14 +1,14 @@
-﻿<UserControl x:Class="ClienApp.MVVM.View.NoteView"
+﻿<UserControl x:Class="ClientApp.MVVM.View.NoteView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ClienApp.MVVM.View" 
-             xmlns:core="clr-namespace:ClienApp.Core"
-             xmlns:viewmodel="clr-namespace:ClienApp.MVVM.ViewModel"    
+             xmlns:local="clr-namespace:ClientApp.MVVM.View" 
+             xmlns:core="clr-namespace:ClientApp.Core"
+             xmlns:viewmodel="clr-namespace:ClientApp.MVVM.ViewModel"    
              d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
              mc:Ignorable="d" 
-             d:DesignHeight="515" d:DesignWidth="700">
+             d:DesignHeight="2000" d:DesignWidth="700">
 
     <ScrollViewer>
         <ScrollViewer.Resources>
@@ -34,7 +34,7 @@
                     <StackPanel x:Name="RoomNameBox"
                         Height="30"
                         Width="298"
-                        Margin="10,10,10,0"
+                        Margin="10,5,10,0"
                         Background="#3f3d52">
 
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -121,40 +121,51 @@
 
                     </StackPanel>
 
-                    <ListBox x:Name="PropertyListBox"
-                     Width="298"
-                     Height="300"
-                     Margin="0"
-                     Background="#3f3d52"
-                     BorderBrush="#22202f"
-                     BorderThickness="0,2,0,0"
-                     Foreground="#3a403a"
-                     FontSize="14"
-                     SelectionMode="Single">
-                        <ListBox.Resources>
-                            <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}" />
-                        </ListBox.Resources>
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding}" TextWrapping="Wrap" Margin="5" FontSize="16" Foreground="White"/>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
+                    <Border Width="298"
+                            Height="300"
+                            CornerRadius="0,0,5,5"
+                            Background="#3f3d52"
+                            Margin="0,0,0,5"
+                            BorderBrush="#22202f"
+                            BorderThickness="0,2,0,0"
+                            SnapsToDevicePixels="True"
+                            ClipToBounds="True">
+
+                        <ListBox x:Name="PropertyListBox"
+                                 Width="298"
+                                 Height="300"
+                                 Margin="0"
+                                 Background="Transparent"
+                                 BorderBrush="#22202f"
+                                 BorderThickness="0,2,0,0"
+                                 Foreground="#3a403a"
+                                 FontSize="14"
+                                 SelectionMode="Single">
+                            <ListBox.Resources>
+                                <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}" />
+                            </ListBox.Resources>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding}" TextWrapping="Wrap" Margin="5" FontSize="16" Foreground="White"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Border>
                 </StackPanel>
 
                 <StackPanel Width="350" x:Name="Rooms">
                     <TextBlock Text="Rooms" FontSize="24" Foreground="White" Margin="30,0,0,0"/>
                     <ComboBox x:Name="RoomsComboBox" 
-                      Width="300" 
-                      Margin="10,10,10,0" 
-                      Height="30" 
-                      HorizontalAlignment="Center" 
-                      Style="{StaticResource CustomComboBoxStyle}"
-                      SelectionChanged="RoomsComboBox_SelectionChanged"/>
+                              Width="300" 
+                              Margin="10,10,10,0" 
+                              Height="30" 
+                              HorizontalAlignment="Center" 
+                              SelectionChanged="RoomsComboBox_SelectionChanged"
+                              Style="{StaticResource CustomComboBoxStyle}"/>
                     <StackPanel x:Name="PropertyNameBox"
                         Height="30"
                         Width="298"
-                        Margin="10,10,10,0"
+                        Margin="10,5,10,0"
                         Background="#3f3d52">
 
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -240,25 +251,36 @@
 
                     </StackPanel>
 
-                    <ListBox x:Name="RoomListBox"
+                    <Border Width="298"
+                            Height="300"
+                            CornerRadius="0,0,5,5"
+                            Background="#3f3d52"
+                            Margin="0,0,0,5"
+                            BorderBrush="#22202f"
+                            BorderThickness="0,2,0,0"
+                            SnapsToDevicePixels="True"
+                            ClipToBounds="True">
+
+                        <ListBox x:Name="RoomListBox"
                      Width="298"
                      Height="300"
                      Margin="0"
-                     Background="#3f3d52"
+                     Background="Transparent"
                      BorderBrush="#22202f"
                      BorderThickness="0,2,0,0"
                      Foreground="#3a403a"
                      FontSize="14"
                      SelectionMode="Single">
-                        <ListBox.Resources>
-                            <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}" />
-                        </ListBox.Resources>
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding}" TextWrapping="Wrap" Margin="5" FontSize="16" Foreground="White"/>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
+                            <ListBox.Resources>
+                                <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}" />
+                            </ListBox.Resources>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding}" TextWrapping="Wrap" Margin="5" FontSize="16" Foreground="White"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Border>
                 </StackPanel>
 
             </StackPanel>
@@ -280,7 +302,7 @@
                 <StackPanel x:Name="OtherNameBox"
                             Height="30"
                             Width="650"
-                            Margin="10,10,10,0"
+                            Margin="10,5,10,0"
                             Background="#3f3d52">
 
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -367,8 +389,8 @@
 
                 </StackPanel>
                 <Border Width="650"
-                        Height="280"
-                        CornerRadius="0,0,10,10"
+                        Height="285"
+                        CornerRadius="0,0,5,5"
                         Background="#3f3d52"
                         Margin="0,0,0,5"
                         BorderBrush="#22202f"
@@ -383,7 +405,7 @@
                              FontSize="14"
                              SelectionMode="Single"
                              Width="650"
-                             Height="280">
+                             Height="285">
 
                         <ListBox.Resources>
                             <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}" />
