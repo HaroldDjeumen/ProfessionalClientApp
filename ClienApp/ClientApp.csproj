@@ -31,7 +31,7 @@
 
   <ItemGroup>
     <Content Include="Data\ImageStorage.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\Notes.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

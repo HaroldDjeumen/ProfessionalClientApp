@@ -1,5 +1,6 @@
 ﻿using ClientApp.Core;
 using ClientApp.MVVM.Model;
+using ClientApp.MVVM.View;
 using ClientApp.MVVM.ViewModel;
 using System.Data.SQLite;
 using System.IO;
@@ -40,11 +41,10 @@ namespace ClientApp.MVVM.ViewModel
         public PropertiesViewModel PropertiesVM { get; set; }
 
         public ColeridgeImageViewModel ColeridgeImageVM { get; set; }
-        public HandelImageViewModel HandelImageVM { get; set; }
+        public RelayCommand HandelImageViewCommand { get; }
         public VerdiImageViewModel VerdiImageVM { get; set; }
         public OlifantImageViewModel OlifantImageVM { get; set; }
 
-        public ICommand HandelImageViewCommand { get; set; }
 
         private object _currentView;
         private bool _canGoBack;
@@ -143,6 +143,8 @@ namespace ClientApp.MVVM.ViewModel
             VerdiImageVM = new VerdiImageViewModel();
             OlifantImageVM = new OlifantImageViewModel();
 
+
+
             // Default view
             CurrentView = HomeVM;
             // Commands
@@ -160,13 +162,13 @@ namespace ClientApp.MVVM.ViewModel
 
             HandelImageViewCommand = new RelayCommand(o =>
             {
-                string selectedFolder = o as string;
-                if (!string.IsNullOrEmpty(selectedFolder))
+                string selectedColumn = o as string;
+                if (!string.IsNullOrEmpty(selectedColumn))
                 {
-                    HandelImageVM = new HandelImageViewModel(selectedFolder);
-                    CurrentView = HandelImageVM;
+                    CurrentView = new HandelImageView(selectedColumn); // Create view directly with column name
                 }
             });
+
 
             RoomDetailViewCommand = new RelayCommand(o =>
             {

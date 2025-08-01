@@ -1,9 +1,9 @@
 ﻿using ClientApp.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SQLite;
+using System.IO;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace ClientApp.MVVM.ViewModel
 {
@@ -18,17 +18,6 @@ namespace ClientApp.MVVM.ViewModel
                 _selectedColumn = value;
                 OnPropertyChanged();
             }
-        }
-
-        public HandelImageViewModel(string selectedColumn)
-        {
-            SelectedColumn = selectedColumn;
-            LoadHandelFromDataBase(selectedColumn);
-        }
-
-        private void LoadHandelFromDataBase(string columnName)
-        {
-            // your logic here
         }
     }
 }

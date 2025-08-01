@@ -47,7 +47,7 @@
                 Padding="0"
                 HorizontalAlignment="Left"
                 Visibility="Visible"
-                Click="NewFolder_Click"
+                Click="NewImage_Click"
                 Cursor="Hand">
 
             <Button.Style>
@@ -92,7 +92,7 @@
                 Padding="0"
                 HorizontalAlignment="Left"
                 Visibility="Visible"
-                Click="NewImage_Click"
+                Click="DeleteImage_Click"
                 Cursor="Hand">
 
             <Button.Style>
@@ -122,7 +122,7 @@ BorderBrush="Transparent"
 Padding="0"
 HorizontalAlignment="Left"
 Visibility="Visible"
-Click="NewImage_Click"
+Click="Menu_Click"
 Cursor="Hand">
 
             <Button.Style>
@@ -141,19 +141,74 @@ Cursor="Hand">
             </Button.Style>
 
             <Image Source="/Images/Icons/icons8-menu-94.png"
-   Width="20"
-   Height="20"
-   Margin="10,0,0,0"/>
+                   Width="20"
+                   Height="20"
+                   Margin="10,0,0,0"/>
         </Button>
 
-    </StackPanel>
-        <StackPanel
-            x:Name="ImageStackPanel"
-            Orientation="Horizontal"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Margin="0,10,0,0">
-            <!-- Images will be added here dynamically -->
+           
         </StackPanel>
+        <Grid>
+
+            <!-- Scrollable Image Grid -->
+            <ScrollViewer VerticalScrollBarVisibility="Visible"
+                  HorizontalScrollBarVisibility="Disabled"
+                  Margin="0,10,0,10"
+                  MaxHeight="470"
+                  Background="Transparent">
+
+                <ScrollViewer.Resources>
+                    <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}" />
+                </ScrollViewer.Resources>
+
+                <WrapPanel x:Name="ImageWrapPanel"
+                   Orientation="Horizontal"
+                   Margin="10">
+                    <!-- Images will be added here dynamically -->
+                </WrapPanel>
+
+            </ScrollViewer>
+
+            <!-- Overlay Grid to show expanded image -->
+            <Grid x:Name="ImageOverlay"
+                  Background="#AA000000"
+                  Visibility="Collapsed"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  MaxHeight="470">
+
+                <!-- Close Button -->
+                <Button Content="X"
+            Width="30"
+            Height="30"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Margin="10"
+            Click="CloseOverlay_Click"/>
+
+                <!-- ScrollViewer for zooming -->
+                <ScrollViewer x:Name="ZoomScrollViewer"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              VerticalScrollBarVisibility="Auto"
+                              HorizontalScrollBarVisibility="Auto"
+                              PanningMode="Both"
+                              CanContentScroll="True"
+                              PreviewMouseWheel="ZoomScrollViewer_MouseWheel">
+                    <Grid>
+                        <Image x:Name="ExpandedImage"
+                               Width="450"
+                               Height="450"
+                               RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <ScaleTransform x:Name="ZoomTransform" ScaleX="1" ScaleY="1"/>
+                            </Image.RenderTransform>
+                        </Image>
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+
+        </Grid>
+
     </StackPanel>
 </UserControl>

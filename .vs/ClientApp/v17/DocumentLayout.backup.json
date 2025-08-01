@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|c:\\users\\hpie9\\source\\repos\\professionalclientapp\\clienapp\\mvvm\\view\\olifantimageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\mvvm\\view\\olifantimageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|c:\\users\\hpie9\\source\\repos\\professionalclientapp\\clienapp\\mvvm\\view\\handelimageview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\mvvm\\view\\handelimageview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,32 +11,28 @@
       "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\mvvm\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|c:\\users\\hpie9\\source\\repos\\professionalclientapp\\clienapp\\mvvm\\viewmodel\\handelimageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\mvvm\\viewmodel\\handelimageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|c:\\users\\hpie9\\source\\repos\\professionalclientapp\\clienapp\\mvvm\\view\\handelimageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\mvvm\\view\\handelimageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|c:\\users\\hpie9\\source\\repos\\professionalclientapp\\clienapp\\mvvm\\view\\gallaryview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\mvvm\\view\\gallaryview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|c:\\users\\hpie9\\source\\repos\\professionalclientapp\\clienapp\\core\\observableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\core\\observableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|c:\\users\\hpie9\\source\\repos\\professionalclientapp\\clienapp\\mvvm\\viewmodel\\handelimageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\mvvm\\viewmodel\\handelimageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|c:\\users\\hpie9\\source\\repos\\professionalclientapp\\clienapp\\mvvm\\view\\propertiesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\mvvm\\view\\propertiesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|c:\\users\\hpie9\\source\\repos\\professionalclientapp\\clienapp\\mvvm\\model\\roomdetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\mvvm\\model\\roomdetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|c:\\users\\hpie9\\source\\repos\\professionalclientapp\\clienapp\\mvvm\\view\\gallaryview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\mvvm\\view\\gallaryview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|c:\\users\\hpie9\\source\\repos\\professionalclientapp\\clienapp\\mvvm\\view\\noteview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\mvvm\\view\\noteview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|c:\\users\\hpie9\\source\\repos\\professionalclientapp\\clienapp\\mvvm\\view\\gallaryview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\mvvm\\view\\gallaryview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|c:\\users\\hpie9\\source\\repos\\professionalclientapp\\clienapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8E21A302-AD9F-4664-AC50-5C352367D4B1}|ClienApp\\ClientApp.csproj|solutionrelative:clienapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,15 +54,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+              "Name": "ST:290017395:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
             },
             {
               "$type": "Bookmark",
@@ -110,35 +98,19 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:140041770:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:370475796:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OlifantImageView.xaml",
-              "DocumentMoniker": "C:\\Users\\hpie9\\Source\\Repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\OlifantImageView.xaml",
-              "RelativeDocumentMoniker": "ClienApp\\MVVM\\View\\OlifantImageView.xaml",
-              "ToolTip": "C:\\Users\\hpie9\\Source\\Repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\OlifantImageView.xaml",
-              "RelativeToolTip": "ClienApp\\MVVM\\View\\OlifantImageView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-27T16:07:14.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ObservableObject.cs",
-              "DocumentMoniker": "C:\\Users\\hpie9\\Source\\Repos\\ProfessionalClientApp\\ClienApp\\Core\\ObservableObject.cs",
-              "RelativeDocumentMoniker": "ClienApp\\Core\\ObservableObject.cs",
-              "ToolTip": "C:\\Users\\hpie9\\Source\\Repos\\ProfessionalClientApp\\ClienApp\\Core\\ObservableObject.cs",
-              "RelativeToolTip": "ClienApp\\Core\\ObservableObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Title": "HandelImageView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\HandelImageView.xaml.cs",
+              "RelativeDocumentMoniker": "ClienApp\\MVVM\\View\\HandelImageView.xaml.cs",
+              "ToolTip": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\HandelImageView.xaml.cs",
+              "RelativeToolTip": "ClienApp\\MVVM\\View\\HandelImageView.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAuwJ0AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T15:20:43.07Z",
+              "WhenOpened": "2025-07-27T14:32:57.023Z",
               "EditorCaption": ""
             },
             {
@@ -147,99 +119,101 @@
               "Title": "HandelImageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\ViewModel\\HandelImageViewModel.cs",
               "RelativeDocumentMoniker": "ClienApp\\MVVM\\ViewModel\\HandelImageViewModel.cs",
-              "ToolTip": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\ViewModel\\HandelImageViewModel.cs*",
-              "RelativeToolTip": "ClienApp\\MVVM\\ViewModel\\HandelImageViewModel.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\ViewModel\\HandelImageViewModel.cs",
+              "RelativeToolTip": "ClienApp\\MVVM\\ViewModel\\HandelImageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T15:15:13.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RoomDetailModel.cs",
-              "DocumentMoniker": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\Model\\RoomDetailModel.cs",
-              "RelativeDocumentMoniker": "ClienApp\\MVVM\\Model\\RoomDetailModel.cs",
-              "ToolTip": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\Model\\RoomDetailModel.cs",
-              "RelativeToolTip": "ClienApp\\MVVM\\Model\\RoomDetailModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T14:45:58.281Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\ViewModel\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "ClienApp\\MVVM\\ViewModel\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\ViewModel\\MainViewModel.cs*",
-              "RelativeToolTip": "ClienApp\\MVVM\\ViewModel\\MainViewModel.cs*",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAAD0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T14:43:40.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PropertiesView.xaml",
-              "DocumentMoniker": "C:\\Users\\hpie9\\Source\\Repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\PropertiesView.xaml",
-              "RelativeDocumentMoniker": "ClienApp\\MVVM\\View\\PropertiesView.xaml",
-              "ToolTip": "C:\\Users\\hpie9\\Source\\Repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\PropertiesView.xaml",
-              "RelativeToolTip": "ClienApp\\MVVM\\View\\PropertiesView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-27T14:42:45.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "NoteView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\NoteView.xaml.cs",
-              "RelativeDocumentMoniker": "ClienApp\\MVVM\\View\\NoteView.xaml.cs",
-              "ToolTip": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\NoteView.xaml.cs",
-              "RelativeToolTip": "ClienApp\\MVVM\\View\\NoteView.xaml.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowDAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T14:33:17.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T20:22:22.411Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HandelImageView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\HandelImageView.xaml.cs",
-              "RelativeDocumentMoniker": "ClienApp\\MVVM\\View\\HandelImageView.xaml.cs",
-              "ToolTip": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\HandelImageView.xaml.cs*",
-              "RelativeToolTip": "ClienApp\\MVVM\\View\\HandelImageView.xaml.cs*",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAwwCkAAAAgAAAAAAAAAA==",
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\ViewModel\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ClienApp\\MVVM\\ViewModel\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\ViewModel\\MainViewModel.cs",
+              "RelativeToolTip": "ClienApp\\MVVM\\ViewModel\\MainViewModel.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAkwFsAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T14:32:57.023Z",
+              "WhenOpened": "2025-07-31T20:22:42.464Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "HandelImageView.xaml",
-              "DocumentMoniker": "C:\\Users\\hpie9\\Source\\Repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\HandelImageView.xaml",
-              "RelativeDocumentMoniker": "ClienApp\\MVVM\\View\\HandelImageView.xaml",
-              "ToolTip": "C:\\Users\\hpie9\\Source\\Repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\HandelImageView.xaml",
-              "RelativeToolTip": "ClienApp\\MVVM\\View\\HandelImageView.xaml",
+              "Title": "PropertiesView.xaml",
+              "DocumentMoniker": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\PropertiesView.xaml",
+              "RelativeDocumentMoniker": "ClienApp\\MVVM\\View\\PropertiesView.xaml",
+              "ToolTip": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\PropertiesView.xaml",
+              "RelativeToolTip": "ClienApp\\MVVM\\View\\PropertiesView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-27T14:17:13.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-01T16:13:16.147Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "GallaryView.xaml",
-              "DocumentMoniker": "C:\\Users\\hpie9\\Source\\Repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\GallaryView.xaml",
-              "RelativeDocumentMoniker": "ClienApp\\MVVM\\View\\GallaryView.xaml",
-              "ToolTip": "C:\\Users\\hpie9\\Source\\Repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\GallaryView.xaml*",
-              "RelativeToolTip": "ClienApp\\MVVM\\View\\GallaryView.xaml*",
+              "Title": "GallaryView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\GallaryView.xaml.cs",
+              "RelativeDocumentMoniker": "ClienApp\\MVVM\\View\\GallaryView.xaml.cs",
+              "ToolTip": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\GallaryView.xaml.cs",
+              "RelativeToolTip": "ClienApp\\MVVM\\View\\GallaryView.xaml.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T16:16:59.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ClienApp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MainWindow.xaml",
+              "RelativeToolTip": "ClienApp\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-27T14:15:58.499Z",
+              "WhenOpened": "2025-08-01T16:01:16.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GallaryView.xaml",
+              "DocumentMoniker": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\GallaryView.xaml",
+              "RelativeDocumentMoniker": "ClienApp\\MVVM\\View\\GallaryView.xaml",
+              "ToolTip": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\GallaryView.xaml",
+              "RelativeToolTip": "ClienApp\\MVVM\\View\\GallaryView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-01T15:34:27.214Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "e7814906-f2f3-4521-812e-5986085f30f9",
+        "Display": 0,
+        "X": 680,
+        "Y": 59,
+        "Width": 1167,
+        "Height": 882,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HandelImageView.xaml",
+              "DocumentMoniker": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\HandelImageView.xaml",
+              "RelativeDocumentMoniker": "ClienApp\\MVVM\\View\\HandelImageView.xaml",
+              "ToolTip": "C:\\Users\\hpie9\\source\\repos\\ProfessionalClientApp\\ClienApp\\MVVM\\View\\HandelImageView.xaml",
+              "RelativeToolTip": "ClienApp\\MVVM\\View\\HandelImageView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-27T14:17:13.157Z",
               "EditorCaption": ""
             }
           ]

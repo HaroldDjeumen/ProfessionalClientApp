@@ -436,8 +436,7 @@
                                 BorderBrush="Transparent"
                                 Padding="0"
                                 HorizontalAlignment="Left"
-                                Click="HandelWater_Click"
-                                Command="{Binding HandelImageViewCommand}"
+                                Command="{Binding DataContext.HandelImageViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
                                 CommandParameter="Water Meter">
 
                             <Button.Style>
@@ -467,8 +466,7 @@
                                 BorderBrush="Transparent"
                                 Padding="0"
                                 HorizontalAlignment="Left"
-                                Click="HandelElec_Click"
-                                Command="{Binding HandelImageViewCommand}"
+                                Command="{Binding DataContext.HandelImageViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
                                 CommandParameter="Electricity">
 
                             <Button.Style>
