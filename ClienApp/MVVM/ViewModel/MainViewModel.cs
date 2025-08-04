@@ -24,10 +24,8 @@ namespace ClientApp.MVVM.ViewModel
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand RoomDetailViewCommand { get; set; }
         public RelayCommand PropertiesViewCommand { get; set; }
-        public RelayCommand ColeridgeImageViewCommand {get; set;}
-
-        public RelayCommand VerdiImageViewCommand { get; set; }
-        public RelayCommand OlifantImageViewCommand { get; set; }
+        public RelayCommand WandEFolderViewCommand { get; set; }
+        public RelayCommand HandelImageViewCommand { get; }
 
         // ViewModels
         public HandelPropertyViewModel HandelPropertyVM { get; set; }
@@ -39,11 +37,8 @@ namespace ClientApp.MVVM.ViewModel
         public HomeViewModel HomeVM { get; set; }
         public RoomDetailViewModel RoomDetailVM { get; set; }
         public PropertiesViewModel PropertiesVM { get; set; }
+        public WandEFolderViewModel WandEFolderVM { get; set; }
 
-        public ColeridgeImageViewModel ColeridgeImageVM { get; set; }
-        public RelayCommand HandelImageViewCommand { get; }
-        public VerdiImageViewModel VerdiImageVM { get; set; }
-        public OlifantImageViewModel OlifantImageVM { get; set; }
 
 
         private object _currentView;
@@ -124,6 +119,43 @@ namespace ClientApp.MVVM.ViewModel
             return loadedRooms;
         }
 
+        private List<WandEFolderModel> LoadInfoFromDatabase()
+        {
+            List<WandEFolderModel> loadedInfo = new List<WandEFolderModel>();
+
+            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "PropertyRooms.db");
+            string connectionString = $"Data Source={dbPath};Version=3;";
+
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                string selectQuery = "SELECT * FROM Info";
+                using (var command = new SQLiteCommand(selectQuery, connection))
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var info = new WandEFolderModel
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            PropertyName = reader["PropertyName"].ToString(),
+                            Roomname = reader["RoomName"].ToString(),
+                            RoomClick = reader["RoomClick"].ToString(),
+                            WaterType = reader["WaterType"].ToString(),
+                            ElecType = reader["ElecType"].ToString()
+
+                        };
+                        loadedInfo.Add(info);
+                    }
+                }
+
+                connection.Close();
+            }
+
+            return loadedInfo;
+        }
+
 
 
         public MainViewModel()
@@ -139,10 +171,7 @@ namespace ClientApp.MVVM.ViewModel
             OlifantPropertyVM = new OlifantPropertyViewModel();
             ColeridgePropertyVM = new ColeridgePropertyViewModel();
             RoomDetailVM = new RoomDetailViewModel();
-            ColeridgeImageVM = new ColeridgeImageViewModel();
-            VerdiImageVM = new VerdiImageViewModel();
-            OlifantImageVM = new OlifantImageViewModel();
-
+            WandEFolderVM = new WandEFolderViewModel();
 
 
             // Default view
@@ -151,9 +180,6 @@ namespace ClientApp.MVVM.ViewModel
             HomeViewCommand = new RelayCommand(o => CurrentView = HomeVM);
             PropertiesViewCommand = new RelayCommand(o => CurrentView = PropertiesVM);
             GallaryViewCommand = new RelayCommand(o => CurrentView = GallaryVM);
-            ColeridgeImageViewCommand = new RelayCommand(o => CurrentView = ColeridgeImageVM);
-            VerdiImageViewCommand = new RelayCommand(o => CurrentView = VerdiImageVM);
-            OlifantImageViewCommand = new RelayCommand(o => CurrentView = OlifantImageVM);
             NoteViewCommand = new RelayCommand(o => CurrentView = NoteVM);
             HandelPropertyViewCommand = new RelayCommand(o => CurrentView = HandelPropertyVM);
             VerdiPropertyViewCommand = new RelayCommand(o => CurrentView = VerdiPropertyVM);
@@ -184,6 +210,24 @@ namespace ClientApp.MVVM.ViewModel
                     else
                     {
                         MessageBox.Show("Room not found!");
+                    }
+                }
+            });
+
+            WandEFolderViewCommand = new RelayCommand(o =>
+            {
+                if (o is string propertyName)
+                {
+                    var matchedProperty = LoadInfoFromDatabase().FirstOrDefault(i => i.PropertyName == propertyName);
+
+                    if (matchedProperty != null)
+                    {
+                        WandEFolderVM.CurrentProperty = matchedProperty;
+                        CurrentView = WandEFolderVM;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Property not found!");
                     }
                 }
             });

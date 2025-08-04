@@ -54,6 +54,10 @@
                 <view:HandelImageView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:WandEFolderViewModel}">
+                <view:WandEFolderView/>
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

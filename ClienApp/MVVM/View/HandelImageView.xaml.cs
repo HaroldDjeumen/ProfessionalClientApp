@@ -12,26 +12,35 @@ namespace ClientApp.MVVM.View
     public partial class HandelImageView : UserControl
     {
         private string _columnName;
+        private string _table;
+        private Matrix _matrix = Matrix.Identity;
+        private Point _lastMousePos;
+        private bool _isDragging = false;
 
         public HandelImageView(string columnName)
         {
             InitializeComponent();
-            _columnName = columnName;
+
+            string input = columnName;
+            String[] parts = input.Split(';');
+            _columnName = parts[0];
+            _table = parts[1];
 
             Loaded += HandelImageView_Loaded;
+            ResetTransform(); // Start clean
         }
 
         private void HandelImageView_Loaded(object sender, RoutedEventArgs e)
         {
-            LoadImagesFromDatabase(_columnName);
+            LoadImagesFromDatabase(_columnName, _table);
         }
 
-        private void LoadImagesFromDatabase(string columnName)
+        private void LoadImagesFromDatabase(string columnName, string tableName)
         {
             ImageWrapPanel.Children.Clear();
             string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "ImageStorage.db");
             string connectionString = $"Data Source={dbPath};Version=3;";
-            string query = $"SELECT [{columnName}] FROM HandelImage WHERE [{columnName}] IS NOT NULL";
+            string query = $"SELECT [{columnName}] FROM [{tableName}] WHERE [{columnName}] IS NOT NULL";
 
             using (var connection = new SQLiteConnection(connectionString))
             {
@@ -67,12 +76,13 @@ namespace ClientApp.MVVM.View
                         img.MouseLeftButtonUp += (s, e) =>
                         {
                             // If overlay is already visible, do nothing
-                            if (ImageOverlay.Visibility == Visibility.Visible)
+                            if (ImageOverlay.Visibility == Visibility.Visible && ImageOverlayBorder.Visibility == Visibility.Visible)
                                 return;
 
                             ExpandedImage.Source = image;
                             ZoomScrollViewer.Focus();
                             ImageOverlay.Visibility = Visibility.Visible;
+                            ImageOverlayBorder.Visibility = Visibility.Visible;
                         };
 
                         // 💡 Don't forget to add image to the panel
@@ -84,27 +94,92 @@ namespace ClientApp.MVVM.View
 
         private void ZoomScrollViewer_MouseWheel(object sender, MouseWheelEventArgs e)
         {
-            if (Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl))
+            if (ExpandedImage.Source == null) return;
+
+            // Calculate zoom factor
+            double zoom = e.Delta > 0 ? 1.1 : 0.9;
+            double newScale = _matrix.M11 * zoom;
+
+            // Prevent zooming out smaller than the original size
+            if (newScale < 1)
+                zoom = 1 / _matrix.M11;
+
+            // Scale around mouse position
+            Point mousePos = e.GetPosition(ExpandedImage);
+            _matrix.ScaleAt(zoom, zoom, mousePos.X, mousePos.Y);
+
+            ClampToBounds();
+            MatrixTransform.Matrix = _matrix;
+            e.Handled = true;
+        }
+
+        private void ClampToBounds()
+        {
+            double frameWidth = ZoomScrollViewer.ActualWidth;
+            double frameHeight = ZoomScrollViewer.ActualHeight;
+
+            double imageWidth = ExpandedImage.ActualWidth * _matrix.M11;
+            double imageHeight = ExpandedImage.ActualHeight * _matrix.M22;
+
+            double maxX = Math.Max(0, (imageWidth - frameWidth) / 2);
+            double maxY = Math.Max(0, (imageHeight - frameHeight) / 2);
+
+            if (_matrix.OffsetX > maxX) _matrix.OffsetX = maxX;
+            if (_matrix.OffsetX < -maxX) _matrix.OffsetX = -maxX;
+            if (_matrix.OffsetY > maxY) _matrix.OffsetY = maxY;
+            if (_matrix.OffsetY < -maxY) _matrix.OffsetY = -maxY;
+        }
+
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (_matrix.M11 <= 1) return; // Disable dragging when not zoomed in
+            _isDragging = true;
+            _lastMousePos = e.GetPosition(ZoomScrollViewer);
+            ExpandedImage.CaptureMouse();
+        }
+
+        private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            _isDragging = false;
+            ExpandedImage.ReleaseMouseCapture();
+        }
+
+        private void Image_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_isDragging)
             {
-                double zoom = e.Delta > 0 ? 0.1 : -0.1;
-                ZoomTransform.ScaleX += zoom;
-                ZoomTransform.ScaleY += zoom;
+                Point currentPos = e.GetPosition(ZoomScrollViewer);
+                Vector delta = currentPos - _lastMousePos;
+                _lastMousePos = currentPos;
 
-                if (ZoomTransform.ScaleX < 1) ZoomTransform.ScaleX = 1;
-                if (ZoomTransform.ScaleY < 1) ZoomTransform.ScaleY = 1;
+                _matrix.Translate(delta.X, delta.Y);
 
-                e.Handled = true;
+                ClampToBounds();
+                MatrixTransform.Matrix = _matrix;
             }
         }
 
 
         private void CloseOverlay_Click(object sender, RoutedEventArgs e)
         {
-            ZoomTransform.ScaleX = 1;
-            ZoomTransform.ScaleY = 1;
-
-            ImageOverlay.Visibility = Visibility.Collapsed;
+            ResetTransform();
             ExpandedImage.Source = null;
+            ImageOverlay.Visibility = Visibility.Collapsed;
+            ImageOverlayBorder.Visibility = Visibility.Collapsed;
+        }
+
+        private void ResetZoom()
+        {
+            _matrix = Matrix.Identity;               // Reset zoom & position
+            MatrixTransform.Matrix = _matrix;        // Apply reset to image
+            _isDragging = false;                     // Stop dragging
+            ExpandedImage.Source = null;             // Clear image
+        }
+
+        private void ResetTransform()
+        {
+            _matrix = Matrix.Identity;
+            MatrixTransform.Matrix = _matrix;
         }
 
 
@@ -127,26 +202,26 @@ namespace ClientApp.MVVM.View
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
-            openFileDialog.Multiselect = true; // Allow multiple image selection
+            openFileDialog.Multiselect = true;
 
             if (openFileDialog.ShowDialog() == true)
             {
                 foreach (string filePath in openFileDialog.FileNames)
                 {
                     byte[] imageBytes = File.ReadAllBytes(filePath);
-                    SaveImageToDatabase(_columnName, imageBytes);
+                    SaveImageToDatabase(_table, _columnName, imageBytes);
                 }
 
                 MessageBox.Show($"{openFileDialog.FileNames.Length} image(s) saved to database!");
 
                 ImageWrapPanel.Children.Clear();
-                LoadImagesFromDatabase(_columnName);
+                LoadImagesFromDatabase(_columnName, _table);
             }
         }
 
 
 
-        private void SaveImageToDatabase(string columnName, byte[] data)
+        private void SaveImageToDatabase(string tableName, string columnName, byte[] data)
         {
             string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "ImageStorage.db");
             string connectionString = $"Data Source={dbPath};Version=3;";
@@ -155,7 +230,7 @@ namespace ClientApp.MVVM.View
             {
                 connection.Open();
 
-                string sql = $"INSERT INTO HandelImage ([{columnName}]) VALUES (@data)";
+                string sql = $"INSERT INTO [{tableName}] ([{columnName}]) VALUES (@data)";
                 using (var cmd = new SQLiteCommand(sql, connection))
                 {
                     cmd.Parameters.AddWithValue("@data", data);
@@ -164,5 +239,6 @@ namespace ClientApp.MVVM.View
             }
         }
 
+        
     }
 }

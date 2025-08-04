@@ -1648,7 +1648,7 @@ CommandParameter="Verdi 8">
                                     Padding="0"
                                     HorizontalAlignment="Left"
                                                      Command="{Binding DataContext.RoomDetailViewCommand, RelativeSource={RelativeSource AncestorType=Window}}"
-                                                     CommandParameter="VallM 1">
+                                                     CommandParameter="VaalM 1">
 
                                                 <Button.Style>
                                                     <Style TargetType="Button">

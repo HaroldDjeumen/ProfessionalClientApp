@@ -42,7 +42,7 @@
         <!-- Room Details -->
         <StackPanel Grid.Column="1" VerticalAlignment="Center" Height="490">
 
-            <TextBlock Text="{Binding CurrentRoom.RoomName}" FontSize="26" FontWeight="Bold" Height="30"  Foreground="White" Margin="10,0,0,0"/>
+            <TextBlock x:Name="currentRoomName" Text="{Binding CurrentRoom.RoomName}" FontSize="26" FontWeight="Bold" Height="30"  Foreground="White" Margin="10,0,0,0"/>
             <TextBlock Text="{Binding CurrentRoom.RoomType}" FontSize="16" Foreground="{Binding CurrentRoom.Lightcolor}" Height="25" Margin="10,5,0,0"/>
 
             <TextBlock Text="Status:" FontWeight="Bold" Margin="10,10,0,0" Foreground="White"/>
@@ -108,7 +108,31 @@
                     Padding="2"
                     BorderBrush="{Binding CurrentRoom.Lightcolor}"
                     BorderThickness="2"
-                    CornerRadius="0,0,10,0"/>
+                    CornerRadius="0,0,10,0">
+                <StackPanel>
+                    <TextBlock Text="    Tasks Outstanding"
+       FontSize="8"
+       Foreground="White"/>
+
+                    <ListBox x:Name="RoomListBox"
+                             Width="310"
+                             Height="170"
+                             Background="Transparent"
+                             BorderThickness="0,0,0,0"
+                             Foreground="#3a403a"
+                             FontSize="14"
+                             SelectionMode="Single">
+                        <ListBox.Resources>
+                            <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}" />
+                        </ListBox.Resources>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" TextWrapping="Wrap" Margin="5" FontSize="16" Foreground="White"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </Border>
         </StackPanel>
     </Grid>
 </UserControl>

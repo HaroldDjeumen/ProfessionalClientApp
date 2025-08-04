@@ -45,12 +45,14 @@
                     VerticalAlignment="Bottom">
 
                 <WrapPanel Orientation="Horizontal" 
-                       Grid.Column="1">
+                       Grid.Column="1"
+                           Margin="0,0,0,40">
 
                     <Button Background="Transparent"
         BorderBrush="Transparent"
         Padding="0"
-        HorizontalAlignment="Left">
+        HorizontalAlignment="Left"
+                            Click="Verdi1_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -93,7 +95,8 @@
                     <Button Background="Transparent"
         BorderBrush="Transparent"
         Padding="0"
-        HorizontalAlignment="Left">
+        HorizontalAlignment="Left"
+                            Click="Verdi2_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -136,7 +139,8 @@
                     <Button Background="Transparent"
         BorderBrush="Transparent"
         Padding="0"
-        HorizontalAlignment="Left">
+        HorizontalAlignment="Left"
+                            Click="Verdi3_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -179,7 +183,8 @@
                     <Button Background="Transparent"
         BorderBrush="Transparent"
         Padding="0"
-        HorizontalAlignment="Left">
+        HorizontalAlignment="Left"
+                            Click="Verdi4_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -222,7 +227,8 @@
                     <Button Background="Transparent"
         BorderBrush="Transparent"
         Padding="0"
-        HorizontalAlignment="Left">
+        HorizontalAlignment="Left"
+                            Click="Verdi5_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -265,7 +271,8 @@
                     <Button Background="Transparent"
         BorderBrush="Transparent"
         Padding="0"
-        HorizontalAlignment="Left">
+        HorizontalAlignment="Left"
+                            Click="Verdi6_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -308,7 +315,8 @@
                     <Button Background="Transparent"
         BorderBrush="Transparent"
         Padding="0"
-        HorizontalAlignment="Left">
+        HorizontalAlignment="Left"
+                            Click="Verdi7_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -351,7 +359,8 @@
                     <Button Background="Transparent"
         BorderBrush="Transparent"
         Padding="0"
-        HorizontalAlignment="Left">
+        HorizontalAlignment="Left"
+                            Click="Verdi8_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -395,16 +404,21 @@
 
                 <Border Background="Transparent"
                     Width="330"
-                    Height="190"
+                    Height="155"
                     Margin="0,10,0,0"
                     Padding="2"
                     BorderBrush="#AFADA9"
                     BorderThickness="2"
                     CornerRadius="0,0,10,0">
 
-                    <TextBlock Text="     Room Quick View"
-                           FontSize="8"
-                           Foreground="White"/>
+                    <StackPanel>
+                        <TextBlock Text="     Room Quick View"
+                                   FontSize="8"
+                                   Foreground="White"/>
+
+                        <StackPanel x:Name="RoomInfo" Margin="0,5,0,0" Height="165" Width="302"/>
+                    </StackPanel>
+
 
                 </Border>
 
@@ -420,25 +434,25 @@
                 CornerRadius="10,0,0,0">
 
                 <StackPanel>
-                    <TextBlock Text=" Property"
+                    <TextBlock Text="Verdi"
                        FontSize="20"
-                       Foreground="White"
+                       Foreground="#222C21"
                        HorizontalAlignment="Left"
                        Margin="10,30,0,0"/>
 
-                    <TextBlock Text="Numbers of Rooms :"
+                    <TextBlock Text="Numbers of Rooms : 8"
                        FontSize="20"
                        Foreground="White"
                        HorizontalAlignment="Left"
                        Margin="10,10,0,0"/>
 
-                    <TextBlock Text="Numbers of Tenants :"
+                    <TextBlock Text="Numbers of Tenants : 8"
                        FontSize="20"
                        Foreground="White"
                        HorizontalAlignment="Left"
                        Margin="10,10,0,0"/>
 
-                    <TextBlock Text="Rooms on BnB :"
+                    <TextBlock Text="Rooms on BnB : 0"
                        FontSize="20"
                        Foreground="White"
                        HorizontalAlignment="Left"
@@ -457,9 +471,29 @@
                 BorderThickness="2"
                 CornerRadius="0,0,0,10">
 
-                <TextBlock Text="    Tasks Outstanding"
-                       FontSize="8"
-                       Foreground="White"/>
+                <StackPanel>
+                    <TextBlock Text="    Tasks Outstanding"
+           FontSize="8"
+           Foreground="White"/>
+
+                    <ListBox x:Name="PropertyListBox"
+             Width="310"
+             Height="255"
+             Background="Transparent"
+             BorderThickness="0,0,0,0"
+             Foreground="#3a403a"
+             FontSize="14"
+             SelectionMode="Single">
+                        <ListBox.Resources>
+                            <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}" />
+                        </ListBox.Resources>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" TextWrapping="Wrap" Margin="5" FontSize="16" Foreground="White"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
             </Border>
 
 

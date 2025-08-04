@@ -48,9 +48,10 @@
                    Grid.Column="1">
 
                     <Button Background="Transparent"
-    BorderBrush="Transparent"
-    Padding="0"
-    HorizontalAlignment="Left">
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Click="VaalM1_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -91,9 +92,10 @@
                     </Button>
 
                     <Button Background="Transparent"
-    BorderBrush="Transparent"
-    Padding="0"
-    HorizontalAlignment="Left">
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Click="VaalM2_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -134,9 +136,10 @@
                     </Button>
 
                     <Button Background="Transparent"
-    BorderBrush="Transparent"
-    Padding="0"
-    HorizontalAlignment="Left">
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Click="VaalM3_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -177,9 +180,10 @@
                     </Button>
 
                     <Button Background="Transparent"
-    BorderBrush="Transparent"
-    Padding="0"
-    HorizontalAlignment="Left">
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Click="VaalM4_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -220,9 +224,10 @@
                     </Button>
 
                     <Button Background="Transparent"
-    BorderBrush="Transparent"
-    Padding="0"
-    HorizontalAlignment="Left">
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Click="VaalM5_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -263,9 +268,98 @@
                     </Button>
 
                     <Button Background="Transparent"
-    BorderBrush="Transparent"
-    Padding="0"
-    HorizontalAlignment="Left">
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Click="VaalM6_clicked">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+
+                        <Border Width="75"
+                                Height="30"
+                                CornerRadius="5"
+                                Margin="5,5">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                    <GradientStop Color="#B3845A" Offset="0.0"/>
+                                    <GradientStop Color="#E0CFC5" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10" 
+                                                   RadiusY="10"
+                                                   Rect="0,0,75,30"/>
+                            </Border.Clip>
+                            <TextBlock Text="Roon 1"
+                                       Foreground="White"
+                                       FontSize="15"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                        </Border>
+                    </Button>
+
+                    <Button Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Click="VaalM7_clicked">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+
+                        <Border Width="75"
+                                Height="30"
+                                CornerRadius="5"
+                                Margin="5,5">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
+                                    <GradientStop Color="#B3845A" Offset="0.0"/>
+                                    <GradientStop Color="#E0CFC5" Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10" 
+                                                   RadiusY="10"
+                                                   Rect="0,0,75,30"/>
+                            </Border.Clip>
+                            <TextBlock  Text="Roon 1"
+                                        Foreground="White"
+                                        FontSize="15"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"/>
+                        </Border>
+                    </Button>
+
+                    <Button Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+                            HorizontalAlignment="Left"
+                            Click="VaalM8_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -306,9 +400,10 @@
                     </Button>
 
                     <Button Background="Transparent"
-    BorderBrush="Transparent"
-    Padding="0"
-    HorizontalAlignment="Left">
+                    BorderBrush="Transparent"
+                    Padding="0"
+                    HorizontalAlignment="Left"
+                    Click="VaalM9_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -326,9 +421,9 @@
                         </Button.Style>
 
                         <Border Width="75"
-        Height="30"
-        CornerRadius="5"
-        Margin="5,5">
+Height="30"
+CornerRadius="5"
+Margin="5,5">
                             <Border.Background>
                                 <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
                                     <GradientStop Color="#B3845A" Offset="0.0"/>
@@ -337,21 +432,22 @@
                             </Border.Background>
                             <Border.Clip>
                                 <RectangleGeometry RadiusX="10" 
-   RadiusY="10"
-   Rect="0,0,75,30"/>
+                   RadiusY="10"
+                   Rect="0,0,75,30"/>
                             </Border.Clip>
                             <TextBlock  Text="Roon 1"
-                Foreground="White"
-                FontSize="15"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"/>
+        Foreground="White"
+        FontSize="15"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"/>
                         </Border>
                     </Button>
 
                     <Button Background="Transparent"
-    BorderBrush="Transparent"
-    Padding="0"
-    HorizontalAlignment="Left">
+                    BorderBrush="Transparent"
+                    Padding="0"
+                    HorizontalAlignment="Left"
+                    Click="VaalM10_clicked">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -369,9 +465,9 @@
                         </Button.Style>
 
                         <Border Width="75"
-        Height="30"
-        CornerRadius="5"
-        Margin="5,5">
+Height="30"
+CornerRadius="5"
+Margin="5,5">
                             <Border.Background>
                                 <LinearGradientBrush StartPoint="0,0" EndPoint="5,1">
                                     <GradientStop Color="#B3845A" Offset="0.0"/>
@@ -380,14 +476,14 @@
                             </Border.Background>
                             <Border.Clip>
                                 <RectangleGeometry RadiusX="10" 
-                           RadiusY="10"
-                           Rect="0,0,75,30"/>
+                   RadiusY="10"
+                   Rect="0,0,75,30"/>
                             </Border.Clip>
                             <TextBlock  Text="Roon 1"
-                Foreground="White"
-                FontSize="15"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"/>
+        Foreground="White"
+        FontSize="15"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"/>
                         </Border>
                     </Button>
 
@@ -395,17 +491,20 @@
 
                 <Border Background="Transparent"
                 Width="330"
-                Height="190"
+                Height="152"
                 Margin="0,10,0,0"
                 Padding="2"
                 BorderBrush="#E0CFC5"
                 BorderThickness="2"
                 CornerRadius="0,0,10,0">
 
-                    <TextBlock Text="     Room Quick View"
+                    <StackPanel>
+                        <TextBlock Text="     Room Quick View"
                        FontSize="8"
                        Foreground="White"/>
 
+                        <StackPanel x:Name="RoomInfo" Margin="0,5,0,0" Height="165" Width="302"/>
+                    </StackPanel>
                 </Border>
 
             </StackPanel>
@@ -420,25 +519,25 @@
             CornerRadius="10,0,0,0">
 
                 <StackPanel>
-                    <TextBlock Text=" Property"
+                    <TextBlock Text="Vaal Mall"
                    FontSize="20"
-                   Foreground="White"
+                   Foreground="#B3845A"
                    HorizontalAlignment="Left"
                    Margin="10,30,0,0"/>
 
-                    <TextBlock Text="Numbers of Rooms :"
+                    <TextBlock Text="Numbers of Rooms : 8"
                    FontSize="20"
                    Foreground="White"
                    HorizontalAlignment="Left"
                    Margin="10,10,0,0"/>
 
-                    <TextBlock Text="Numbers of Tenants :"
+                    <TextBlock Text="Numbers of Tenants : 0"
                    FontSize="20"
                    Foreground="White"
                    HorizontalAlignment="Left"
                    Margin="10,10,0,0"/>
 
-                    <TextBlock Text="Rooms on BnB :"
+                    <TextBlock Text="Rooms on BnB : 2"
                    FontSize="20"
                    Foreground="White"
                    HorizontalAlignment="Left"
@@ -457,9 +556,29 @@
             BorderThickness="2"
             CornerRadius="0,0,0,10">
 
-                <TextBlock Text="    Tasks Outstanding"
-                   FontSize="8"
-                   Foreground="White"/>
+                <StackPanel>
+                    <TextBlock Text="    Tasks Outstanding"
+           FontSize="8"
+           Foreground="White"/>
+
+                    <ListBox x:Name="PropertyListBox"
+             Width="310"
+             Height="255"
+             Background="Transparent"
+             BorderThickness="0,0,0,0"
+             Foreground="#3a403a"
+             FontSize="14"
+             SelectionMode="Single">
+                        <ListBox.Resources>
+                            <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}" />
+                        </ListBox.Resources>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" TextWrapping="Wrap" Margin="5" FontSize="16" Foreground="White"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
             </Border>
 
 
