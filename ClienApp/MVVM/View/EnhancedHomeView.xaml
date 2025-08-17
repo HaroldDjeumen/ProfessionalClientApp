@@ -1,0 +1,420 @@
+﻿<UserControl x:Class="ClientApp.MVVM.View.EnhancedHomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClientApp.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="700">
+    
+    <UserControl.Resources>
+        <!-- Quick Access Button Style -->
+        <Style x:Key="QuickAccessButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#3a8ee6"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="8"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <StackPanel Orientation="Vertical" 
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center">
+                                <Image Source="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}" 
+                                       Width="32" Height="32" Margin="0,0,0,8"/>
+                                <ContentPresenter HorizontalAlignment="Center" 
+                                                VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#5bc3ff"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#2a7ed6"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Dashboard Card Style -->
+        <Style x:Key="DashboardCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="#3a3a3a"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" Direction="270" ShadowDepth="2" Opacity="0.3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Quick Action Button Style -->
+        <Style x:Key="QuickActionButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#844eff"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="Margin" Value="5,2"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="5"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#9d5eff"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <ScrollViewer.Resources>
+            <Style TargetType="ScrollBar" BasedOn="{StaticResource ModernScrollBarStyle}"/>
+        </ScrollViewer.Resources>
+        
+        <StackPanel Margin="20">
+            
+            <!-- Header with Search -->
+            <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="300"/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock Text="Dashboard" 
+                          Foreground="White" 
+                          FontSize="32" 
+                          FontWeight="Bold"
+                          VerticalAlignment="Center"/>
+                
+                <!-- Search Everything Bar -->
+                <Border Grid.Column="1" 
+                       Background="#3a3a3a" 
+                       CornerRadius="20" 
+                       Padding="15,8">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="SearchBox"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Foreground="White"
+                                FontSize="14"
+                                VerticalAlignment="Center"
+                                Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBlock Grid.Column="0"
+                                  Text="Search everything..."
+                                  Foreground="#888"
+                                  FontSize="14"
+                                  VerticalAlignment="Center"
+                                  IsHitTestVisible="False">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=SearchBox}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        <Button Grid.Column="1"
+                               Background="Transparent"
+                               BorderThickness="0"
+                               Padding="5"
+                               Command="{Binding SearchCommand}">
+                            <Image Source="/Images/Icons/50x50/icons8-search-50.png" Width="16" Height="16"/>
+                        </Button>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <!-- Quick Access Buttons -->
+            <TextBlock Text="Quick Access" 
+                      Foreground="White" 
+                      FontSize="20" 
+                      FontWeight="Bold" 
+                      Margin="0,0,0,15"/>
+            
+            <UniformGrid Rows="1" Columns="5" Margin="0,0,0,30">
+                <Button Content="Rooms" 
+                       Style="{StaticResource QuickAccessButtonStyle}"
+                       Tag="/Images/Icons/50x50/icons8-room-50.png"
+                       Command="{Binding PropertiesViewCommand}"
+                       ToolTip="Manage all rooms and properties"/>
+                
+                <Button Content="Tenants" 
+                       Style="{StaticResource QuickAccessButtonStyle}"
+                       Tag="/Images/Icons/50x50/icons8-people-50.png"
+                       Command="{Binding TenantsViewCommand}"
+                       ToolTip="View and manage tenants"/>
+                
+                <Button Content="Reports" 
+                       Style="{StaticResource QuickAccessButtonStyle}"
+                       Tag="/Images/Icons/50x50/icons8-report-50.png"
+                       Command="{Binding ReportsViewCommand}"
+                       ToolTip="Generate financial and occupancy reports"/>
+                
+                <Button Content="Notes" 
+                       Style="{StaticResource QuickAccessButtonStyle}"
+                       Tag="/Images/Icons/50x50/icons8-note-50.png"
+                       Command="{Binding NoteViewCommand}"
+                       ToolTip="Quick notes and reminders"/>
+                
+                <Button Content="Payments" 
+                       Style="{StaticResource QuickAccessButtonStyle}"
+                       Tag="/Images/Icons/50x50/icons8-payment-50.png"
+                       Command="{Binding PaymentsViewCommand}"
+                       ToolTip="Track rent payments and finances"/>
+            </UniformGrid>
+
+            <!-- Dashboard Summary Cards -->
+            <TextBlock Text="Overview" 
+                      Foreground="White" 
+                      FontSize="20" 
+                      FontWeight="Bold" 
+                      Margin="0,0,0,15"/>
+            
+            <UniformGrid Rows="1" Columns="4" Margin="0,0,0,30">
+                <!-- Total Rooms Card -->
+                <Border Style="{StaticResource DashboardCardStyle}" Background="#3a8ee6">
+                    <StackPanel>
+                        <TextBlock Text="{Binding TotalRooms}" 
+                                  Foreground="White" 
+                                  FontSize="28" 
+                                  FontWeight="Bold" 
+                                  HorizontalAlignment="Center"/>
+                        <TextBlock Text="Total Rooms" 
+                                  Foreground="White" 
+                                  FontSize="14" 
+                                  HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+                
+                <!-- Occupied Rooms Card -->
+                <Border Style="{StaticResource DashboardCardStyle}" Background="#5bc3ff">
+                    <StackPanel>
+                        <TextBlock Text="{Binding OccupiedRooms}" 
+                                  Foreground="White" 
+                                  FontSize="28" 
+                                  FontWeight="Bold" 
+                                  HorizontalAlignment="Center"/>
+                        <TextBlock Text="Occupied" 
+                                  Foreground="White" 
+                                  FontSize="14" 
+                                  HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+                
+                <!-- Unpaid Tenants Card -->
+                <Border Style="{StaticResource DashboardCardStyle}" Background="#ff6b6b">
+                    <StackPanel>
+                        <TextBlock Text="{Binding UnpaidTenants}" 
+                                  Foreground="White" 
+                                  FontSize="28" 
+                                  FontWeight="Bold" 
+                                  HorizontalAlignment="Center"/>
+                        <TextBlock Text="Unpaid" 
+                                  Foreground="White" 
+                                  FontSize="14" 
+                                  HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+                
+                <!-- BnB Check-ins Card -->
+                <Border Style="{StaticResource DashboardCardStyle}" Background="#51cf66">
+                    <StackPanel>
+                        <TextBlock Text="{Binding TodayCheckIns}" 
+                                  Foreground="White" 
+                                  FontSize="28" 
+                                  FontWeight="Bold" 
+                                  HorizontalAlignment="Center"/>
+                        <TextBlock Text="Check-ins Today" 
+                                  Foreground="White" 
+                                  FontSize="14" 
+                                  HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+
+            <!-- Quick Actions and Notifications Row -->
+            <Grid Margin="0,0,0,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- Quick Actions -->
+                <Border Grid.Column="0" Style="{StaticResource DashboardCardStyle}" Margin="0,0,10,0">
+                    <StackPanel>
+                        <TextBlock Text="Quick Actions" 
+                                  Foreground="White" 
+                                  FontSize="18" 
+                                  FontWeight="Bold" 
+                                  Margin="0,0,0,15"/>
+                        
+                        <Button Content="+ Add Tenant" 
+                               Style="{StaticResource QuickActionButtonStyle}"
+                               Command="{Binding AddTenantCommand}"/>
+                        
+                        <Button Content="+ Create Note" 
+                               Style="{StaticResource QuickActionButtonStyle}"
+                               Command="{Binding CreateNoteCommand}"/>
+                        
+                        <Button Content="✓ Mark Rent Paid" 
+                               Style="{StaticResource QuickActionButtonStyle}"
+                               Command="{Binding MarkRentPaidCommand}"/>
+                        
+                        <Button Content="📊 Generate Report" 
+                               Style="{StaticResource QuickActionButtonStyle}"
+                               Command="{Binding GenerateReportCommand}"/>
+                    </StackPanel>
+                </Border>
+                
+                <!-- Notifications -->
+                <Border Grid.Column="1" Style="{StaticResource DashboardCardStyle}" Margin="10,0,0,0">
+                    <StackPanel>
+                        <TextBlock Text="Notifications" 
+                                  Foreground="White" 
+                                  FontSize="18" 
+                                  FontWeight="Bold" 
+                                  Margin="0,0,0,15"/>
+                        
+                        <ItemsControl ItemsSource="{Binding Notifications}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="#ff6b6b" 
+                                           CornerRadius="5" 
+                                           Padding="10,5" 
+                                           Margin="0,2"
+                                           Cursor="Hand">
+                                        <Border.InputBindings>
+                                            <MouseBinding MouseAction="LeftClick" 
+                                                        Command="{Binding DataContext.NotificationClickCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                        CommandParameter="{Binding}"/>
+                                        </Border.InputBindings>
+                                        <TextBlock Text="{Binding Message}" 
+                                                  Foreground="White" 
+                                                  FontSize="12" 
+                                                  TextWrapping="Wrap"/>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <!-- Pinned Notes and Recent Activity Row -->
+            <Grid Margin="0,0,0,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- Pinned Notes -->
+                <Border Grid.Column="0" Style="{StaticResource DashboardCardStyle}" Margin="0,0,10,0">
+                    <StackPanel>
+                        <Grid Margin="0,0,0,15">
+                            <TextBlock Text="Pinned Notes" 
+                                      Foreground="White" 
+                                      FontSize="18" 
+                                      FontWeight="Bold"/>
+                            <Button Content="+" 
+                                   HorizontalAlignment="Right"
+                                   Background="#844eff"
+                                   Foreground="White"
+                                   BorderThickness="0"
+                                   Width="25" Height="25"
+                                   FontSize="16"
+                                   Command="{Binding AddPinnedNoteCommand}"/>
+                        </Grid>
+                        
+                        <ItemsControl ItemsSource="{Binding PinnedNotes}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="#ffd43b" 
+                                           CornerRadius="5" 
+                                           Padding="10" 
+                                           Margin="0,5"
+                                           AllowDrop="True">
+                                        <TextBlock Text="{Binding Content}" 
+                                                  Foreground="Black" 
+                                                  FontSize="12" 
+                                                  TextWrapping="Wrap"/>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+                
+                <!-- Recent Activity -->
+                <Border Grid.Column="1" Style="{StaticResource DashboardCardStyle}" Margin="10,0,0,0">
+                    <StackPanel>
+                        <TextBlock Text="Recent Activity" 
+                                  Foreground="White" 
+                                  FontSize="18" 
+                                  FontWeight="Bold" 
+                                  Margin="0,0,0,15"/>
+                        
+                        <ItemsControl ItemsSource="{Binding RecentActivities}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="#3a3a3a" 
+                                           CornerRadius="5" 
+                                           Padding="10,8" 
+                                           Margin="0,3">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="{Binding Description}" 
+                                                      Foreground="White" 
+                                                      FontSize="12" 
+                                                      TextWrapping="Wrap"/>
+                                            <TextBlock Grid.Column="1"
+                                                      Text="{Binding TimeAgo}" 
+                                                      Foreground="#888" 
+                                                      FontSize="10" 
+                                                      VerticalAlignment="Top"/>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
+
